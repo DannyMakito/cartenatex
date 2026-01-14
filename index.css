@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-swiss-red: #e01424;
+  --color-swiss-black: #000000;
+  --color-swiss-dark: #1a1a1a;
+  --color-swiss-gray: #f9f9f9;
+  --font-sans: "Raleway", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .skew-btn {
+    transform: skewX(-18deg);
+  }
+  .skew-btn-content {
+    transform: skewX(18deg);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #ecedf1; 
+}
+::-webkit-scrollbar-thumb {
+  background: #e01424; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
