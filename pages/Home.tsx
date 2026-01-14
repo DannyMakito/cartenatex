@@ -20,7 +20,7 @@ const Home: React.FC<HomeProps> = ({ onBook }) => {
       transition={{ duration: 0.5 }}
     >
       <div id="home">
-        <Hero />
+        <Hero onBook={onBook} />
       </div>
       <Features />
       
