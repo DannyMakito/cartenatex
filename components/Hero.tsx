@@ -11,7 +11,7 @@ const SLIDES = [
   {
     id: 1,
     // Couple smiling / Customer satisfaction
-    image: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=2070',
+    image: 'https://media.istockphoto.com/id/1831623373/photo/mechanic-giving-a-woman-the-keys-of-her-car-at-a-garage.jpg?s=612x612&w=0&k=20&c=nBfrBgkQHEBnY1DGuOdJU2gUs-kl8c1uupgdVBw-M3Y=',
     title: "Real affordable services that leaves a smile",
     cta: "Book Appointment"
   },
@@ -25,7 +25,7 @@ const SLIDES = [
   {
     id: 3,
     // Diagnostic tool
-    image: 'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&q=80&w=2070',
+    image: 'https://th.bing.com/th/id/OIP.yJFYmsrWH2RUZ74Q4_-Q2gHaEo?w=315&h=196&c=7&r=0&o=7&pid=1.7&rm=3',
     title: "We diagnose and repair any problem fast!",
     cta: "Contact Us"
   }

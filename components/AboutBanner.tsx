@@ -18,7 +18,7 @@ const AboutBanner: React.FC = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold mb-6 leading-tight"
           >
-            Cartenatex– The Best Car Service repair Center in south africa
+            Cartenatex– The Best Car Service repair Center in Germiston
           </motion.h2>
           
           <motion.div 
@@ -33,7 +33,7 @@ const AboutBanner: React.FC = () => {
               CartContext has over 10years of quality car repair experience. From us, you can expect to receive dealership-quality services at prices that are simply unbeatable!
             </p>
             <p className="font-semibold text-white pt-2">
-              Receive Specialized Car Repair Services in the south africa.
+              Receive Specialized Car Repair Services in the Germiston.
             </p>
           </motion.div>
 
