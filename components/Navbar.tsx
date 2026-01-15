@@ -84,7 +84,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
             <div className="flex-shrink-0">
               <Link to="/" className="block">
                 <img
-                  src="/public/images/cartenatex.jpg"
+                  src="/images/cartenatex.jpg"
                   alt="Cartenatex Logo"
                   style={{ height: '48px', width: 'auto' }}
                   className="shadow-sm"

@@ -33,7 +33,7 @@ export const PRODUCTS: Product[] = [
     name: 'XTOOL IP900 ',
     category: 'Heavy Duty',
     price: 14200,
-    image: 'public/images/xtool3.jpg',
+    image: '/images/xtool3.jpg',
     description: 'XTOOL IP900 V+ is a 10.1-inch advanced automotive diagnostic tool with heavy-duty module compatibility.',
     features: ['Active Test', 'ECU Coding', 'Key Programming', 'Wireless Bluetooth']
   },
@@ -42,7 +42,7 @@ export const PRODUCTS: Product[] = [
     name: 'XTOOL Anyscan A30M',
     category: 'Handheld',
     price: 1200,
-    image: 'public/images/xtool2.webp',
+    image: '/images/xtool2.webp',
     description: 'Empower yourself with dealership level data. The XTOOL Anyscan A30M provides special bidirectional control functions.',
     features: ['RepairSolutions2 App', 'Live Data', 'Smog Check', 'ABS/SRS Support']
   },
@@ -51,13 +51,13 @@ export const PRODUCTS: Product[] = [
     name: 'XTOOL Pro2',
     category: 'Bluetooth Scanner',
     price: 1600,
-    image: 'public/images/xtool_pro2.webp',
+    image: '/images/xtool_pro2.webp',
     description: 'Wireless diagnostics at its best. The XTOOL Pro2 offers lifetime free updates and full system diagnostics.',
     features: ['Bluetooth VCI', 'AutoVIN', 'Oil Reset', 'EPB Reset']
   },
   {
     id: '6',
-    name: 'Foxwell NT301 OBD2 Scanner',
+    name: 'XTOOL NT301 OBD2 Scanner',
     category: 'Entry Level',
     price: 450,
     image: 'https://image.made-in-china.com/229f0j00eEkRnjMqZhcT/V519-mp4.webp',
