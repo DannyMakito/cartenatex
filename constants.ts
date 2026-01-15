@@ -15,7 +15,7 @@ export const PRODUCTS: Product[] = [
     name: 'XTOOL D8 Automotive Diagnostic Scan Tool',
     category: 'Professional Scanner',
     price: 12399,
-    image: 'public/images/xtool.webp',
+    image: '/images/xtool.webp',
     description: 'The XTOOL D8 is a professional automotive diagnostic tool with ECU coding, bi-directional control, OE-level full system diagnostics, and 38+ service functions.',
     features: ['ECU Coding', 'Bi-Directional Control', '38+ Service Functions', '3-Year Free Updates']
   },
