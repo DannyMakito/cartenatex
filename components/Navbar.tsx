@@ -24,13 +24,25 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Body scroll lock when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     setIsOpen(false);
-    
+
     if (href.startsWith('/#')) {
       e.preventDefault();
       const elementId = href.replace('/#', '');
-      
+
       if (location.pathname !== '/') {
         navigate('/');
         setTimeout(() => {
@@ -73,10 +85,9 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
       </div>
 
       {/* Main Nav */}
-      <header 
-        className={`sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-white shadow-lg py-2' : 'bg-white/95 backdrop-blur-sm py-4'
-        }`}
+      <header
+        className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg py-2' : 'bg-white/95 backdrop-blur-sm py-4'
+          }`}
       >
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
@@ -97,13 +108,13 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
               {NAV_ITEMS.map((item) => {
                 const isHashLink = item.href.startsWith('/#');
                 const isActive = !isHashLink && (
-                  location.pathname === item.href || 
+                  location.pathname === item.href ||
                   (item.href !== '/' && location.pathname.startsWith(item.href))
                 );
-                
+
                 return (
                   <div key={item.label} className="relative group">
-                    <Link 
+                    <Link
                       to={item.href}
                       className={`text-gray-800 font-bold hover:text-swiss-red transition-colors py-2 flex items-center ${isActive ? 'text-swiss-red' : ''}`}
                       onClick={(e) => handleNavClick(e, item.href)}
@@ -118,8 +129,8 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
             </nav>
 
             <div className="flex items-center space-x-4">
-              <button 
-                onClick={openCart} 
+              <button
+                onClick={openCart}
                 className="relative p-2 text-gray-800 hover:text-swiss-red transition-colors"
                 aria-label="Open Cart"
               >
@@ -132,7 +143,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
               </button>
 
               <div className="hidden md:block">
-                <button 
+                <button
                   onClick={onBook}
                   className="skew-btn bg-swiss-red text-white px-6 py-3 hover:bg-red-700 transition-colors shadow-md"
                 >
@@ -142,7 +153,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
                 </button>
               </div>
 
-              <button 
+              <button
                 className="lg:hidden text-gray-800 p-2"
                 onClick={() => setIsOpen(!isOpen)}
               >
@@ -151,37 +162,82 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
             </div>
           </div>
         </div>
+      </header>
 
-        {/* Mobile Menu */}
-        <div 
-          className={`lg:hidden fixed inset-0 z-40 bg-white transform transition-transform duration-300 ease-in-out ${
-            isOpen ? 'translate-x-0' : 'translate-x-full'
+      {/* Backdrop overlay */}
+      <div
+        className={`lg:hidden fixed inset-0 bg-black/60 z-[100] backdrop-blur-sm transition-opacity duration-300 ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
-          style={{ top: '60px' }}
-        >
-          <div className="flex flex-col p-6 space-y-4 h-full overflow-y-auto">
-            {NAV_ITEMS.map((item) => (
-              <Link 
-                key={item.label}
-                to={item.href}
-                className="text-xl font-bold text-gray-800 border-b border-gray-100 py-4 hover:text-swiss-red"
-                onClick={(e) => handleNavClick(e, item.href)}
-              >
-                {item.label}
-              </Link>
-            ))}
-            <button 
-              onClick={() => { onBook(); setIsOpen(false); }}
-              className="mt-4 bg-swiss-red text-white py-4 rounded font-bold uppercase tracking-widest"
+        onClick={() => setIsOpen(false)}
+      />
+
+      {/* Mobile Menu Drawer */}
+      <div
+        className={`lg:hidden fixed top-0 right-0 bottom-0 w-[85%] max-w-[400px] z-[110] bg-white shadow-2xl transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
+      >
+        <div className="flex flex-col h-full">
+          {/* Mobile Menu Header */}
+          <div className="flex items-center justify-between p-4 border-b border-gray-100 bg-white">
+            <Link to="/" onClick={() => setIsOpen(false)} className="block">
+              <img
+                src="/images/cartenatex.jpg"
+                alt="Cartenatex Logo"
+                style={{ height: '40px', width: 'auto' }}
+              />
+            </Link>
+            <button
+              onClick={() => setIsOpen(false)}
+              className="p-2 text-gray-800 hover:text-swiss-red transition-colors"
+              aria-label="Close menu"
             >
-              Book Appointment
+              <X size={28} />
             </button>
-            <a href="tel:0118250184" className="flex items-center justify-center bg-gray-900 text-white py-4 rounded font-bold">
-              <Phone className="mr-2" /> Call Now
-            </a>
+          </div>
+
+          {/* Mobile Menu Links */}
+          <div className="flex-1 overflow-y-auto p-6 space-y-2">
+            {NAV_ITEMS.map((item) => {
+              const isHashLink = item.href.startsWith('/#');
+              const isActive = !isHashLink && (
+                location.pathname === item.href ||
+                (item.href !== '/' && location.pathname.startsWith(item.href))
+              );
+
+              return (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className={`block text-xl font-bold py-4 border-b border-gray-50 transition-colors ${isActive ? 'text-swiss-red' : 'text-gray-800 hover:text-swiss-red'
+                    }`}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+
+            <div className="pt-8 space-y-4">
+              <button
+                onClick={() => { onBook(); setIsOpen(false); }}
+                className="w-full bg-swiss-red text-white py-4 rounded-lg font-bold uppercase tracking-widest hover:bg-red-700 transition-colors shadow-md"
+              >
+                Book Appointment
+              </button>
+              <a
+                href="tel:0118250184"
+                className="flex items-center justify-center w-full bg-gray-900 text-white py-4 rounded-lg font-bold hover:bg-black transition-colors"
+              >
+                <Phone className="mr-3" size={20} /> Call Now
+              </a>
+              <div className="pt-4 flex items-center justify-center space-x-2 text-gray-500 text-sm">
+                <MapPin size={16} className="text-swiss-red" />
+                <span>Johannesburg, South Africa</span>
+              </div>
+            </div>
           </div>
         </div>
-      </header>
+      </div>
     </>
   );
 };
