@@ -70,13 +70,13 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
       <div className="bg-black text-white text-sm py-2 hidden md:block">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center space-x-6">
-            <a href="tel:0118250184" className="flex items-center hover:text-swiss-red transition-colors">
+            <a href="tel:081 384 2307" className="flex items-center hover:text-swiss-red transition-colors">
               <Phone size={16} className="mr-2 text-swiss-red" />
               <span className="font-bold">011 825 0184</span>
             </a>
             <span className="hidden lg:inline text-gray-400">|</span>
-            <a href="https://wa.me/27602116094" className="flex items-center hover:text-swiss-red transition-colors">
-              <span className="font-bold">WhatsApp: 060 211 6094</span>
+            <a href="https://wa.me/27603005169" className="flex items-center hover:text-swiss-red transition-colors">
+              <span className="font-bold">WhatsApp: 060 300 5169</span>
             </a>
           </div>
           <div className="flex items-center">
