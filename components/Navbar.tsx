@@ -40,6 +40,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
     setIsOpen(false);
 
     if (href.startsWith('/#')) {
+      // Handle hash links (scroll to section)
       e.preventDefault();
       const elementId = href.replace('/#', '');
 
@@ -57,6 +58,9 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
           element.scrollIntoView({ behavior: 'smooth' });
         }
       }
+    } else {
+      // For regular page navigation, scroll to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
