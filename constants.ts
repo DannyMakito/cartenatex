@@ -263,8 +263,8 @@ export const BENEFITS: BenefitItem[] = [
 
 export const FAQS: FAQItem[] = [
   {
-    question: 'How many branches does Royal Swiss Auto Services have?',
-    answer: 'We have multiple branches across the UAE, including locations in Dubai (Al Quoz), Abu Dhabi, Sharjah, Al Ain, and Ras Al-Khaimah.'
+    question: 'How many days does cartenatex opperate ?',
+    answer: 'We opperate 6 days a week.'
   },
   {
     question: 'What services does cartenatex offer?',
