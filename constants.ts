@@ -75,7 +75,7 @@ export const SERVICES: ServiceItem[] = [
   {
     title: 'Electrical Services',
     image: 'https://eroadworthygeelong.com.au/wp-content/uploads/2024/06/Auto-Electrical-Services-01.jpg',
-    items: ['AC Repair', 'Comfort System Repair']
+    items: ['AC Repair', 'Comfort System Repair','Fault-finding','charging systems']
   },
   {
     title: 'Diagnostics toool',
@@ -160,12 +160,7 @@ export const ALL_SERVICES: DetailedServiceItem[] = [
     description: "Do you know that the gearbox is the second most essential part of the car?",
     link: "/services/gearbox-repair"
   },
-  {
-    title: "Pre-purchase inspection",
-    image: "https://swissauto.ae/wp-content/uploads/2023/01/Pre-Incepection-Content.jpg",
-    description: "Do you know that you can save a lot of money and secure your safety if you get a pre-owned car inspected before purchasing it?",
-    link: "/services/pre-purchase-inspection"
-  },
+ 
   {
     title: "Suspension Repair",
     image: "https://swissauto.ae/wp-content/uploads/2023/01/Suspension-repair-content.jpg",
@@ -202,12 +197,7 @@ export const ALL_SERVICES: DetailedServiceItem[] = [
     description: "Minor car services do not cost much but have a greater impact on your vehicle’s overall health and keep away major repairs.",
     link: "/services/minor-service"
   },
-  {
-    title: "Paint Protection film",
-    image: "https://swissauto.ae/wp-content/uploads/2022/12/PPF-Content-Image.jpg",
-    description: "PPF installation is essential to cover your car’s exterior and safeguard the paint job.",
-    link: "/services/paint-protection-film"
-  },
+  
   {
     title: "Brake Caliper Painting",
     image: "https://swissauto.ae/wp-content/uploads/2022/12/Brake-Caliber-Content-Image.jpg",
@@ -225,12 +215,6 @@ export const ALL_SERVICES: DetailedServiceItem[] = [
     image: "https://swissauto.ae/wp-content/uploads/2022/12/CAR-DIP-COLOR-SERVICE-Content-Image.jpg",
     description: "Quality dip color paint services when done with greater care provides a unique finish to your vehicle.",
     link: "/services/car-dip-color-service"
-  },
-  {
-    title: "Car Tinting services",
-    image: "https://swissauto.ae/wp-content/uploads/2022/10/car-tinting.jpg",
-    description: "A car tinting service enhances the resale value of your vehicle and provides a flawless look.",
-    link: "/services/car-tinting-services"
   }
 ];
 
