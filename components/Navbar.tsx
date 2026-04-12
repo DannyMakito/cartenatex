@@ -101,7 +101,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
                 <img
                   src="/images/clogo.png"
                   alt="Cartenatex Logo"
-                  style={{ height: '50px', width: 'auto' }}
+                  style={{ height: '52px', width: 'auto' }}
                   className="shadow-sm"
                 />
               </Link>
