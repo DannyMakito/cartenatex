@@ -44,8 +44,8 @@ const Features: React.FC = () => {
         delay={0.2}
       />
       <FeatureBox 
-        title="Pick Up Across UAE" 
-        subtitle="We come to you no matter where you are in the UAE."
+        title="Pick Up Across germiston" 
+        subtitle="We come to you no matter where you are in the germiston."
         buttonText="Schedule Now"
         delay={0.3}
       />

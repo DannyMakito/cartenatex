@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
             <div className="flex flex-wrap gap-4">
               <a href="#" className="flex items-center hover:text-swiss-red"><MapPin size={14} className="mr-1" /> South africa</a>
               <a href="#" className="flex items-center hover:text-swiss-red"><MapPin size={14} className="mr-1" /> Guateng</a>
-              <a href="#" className="flex items-center hover:text-swiss-red"><MapPin size={14} className="mr-1" /> Sharjah</a>
+              <a href="#" className="flex items-center hover:text-swiss-red"><MapPin size={14} className="mr-1" /> Gemiston</a>
             </div>
           </div>
 
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
               <li><a href="#" className="hover:text-swiss-red transition-colors">Gearbox Repair</a></li>
               <li><a href="#" className="hover:text-swiss-red transition-colors">Suspension Repair</a></li>
               <li><a href="#" className="hover:text-swiss-red transition-colors">Major Service</a></li>
-            </ul>
+            </ul> 
           </div>
 
           <div>
@@ -93,12 +93,12 @@ const Footer: React.FC = () => {
             <ul className="space-y-3">
               <li>
                 <a href="tel:600579477" className="flex items-center hover:text-swiss-red">
-                  <Phone size={16} className="mr-2" /> 6005 SWISS (79477)
+                  <Phone size={16} className="mr-2" />060 300 5169
                 </a>
               </li>
               <li>
                 <a href="mailto:hello@swissauto.ae" className="flex items-center hover:text-swiss-red">
-                  <Mail size={16} className="mr-2" /> hello@swissauto.ae
+                  <Mail size={16} className="mr-2" /> info@cartenatex.co.za
                 </a>
               </li>
             </ul>

@@ -18,7 +18,7 @@ const AboutBanner: React.FC = () => {
             viewport={{ once: true }}
             className="text-3xl md:text-4xl font-bold mb-6 leading-tight"
           >
-            Cartenatex– The Best Car Service repair Center in Germiston
+            Cartenatex R and R Automotive – The Best Car Service repair Center in Germiston
           </motion.h2>
           
           <motion.div 
