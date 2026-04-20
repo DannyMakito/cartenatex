@@ -185,7 +185,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
           <div className="flex items-center justify-between p-4 border-b border-gray-100 bg-white">
             <Link to="/" onClick={() => setIsOpen(false)} className="block">
               <img
-                src="/images/cartenatex.jpg"
+                src="/images/cbg.png"
                 alt="Cartenatex Logo"
                 style={{ height: '40px', width: 'auto' }}
               />

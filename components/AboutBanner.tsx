@@ -21,6 +21,7 @@ const AboutBanner: React.FC = () => {
             Cartenatex R and R Automotive – The Best Car Service repair Center in Germiston
           </motion.h2>
           
+          
           <motion.div 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -30,7 +31,7 @@ const AboutBanner: React.FC = () => {
           >
            
             <p>
-              CartContext has over 10years of quality car repair experience. From us, you can expect to receive dealership-quality services at prices that are simply unbeatable!
+              R and R Automotive has over 10years of quality car repair experience. From us, you can expect to receive dealership-quality services at prices that are simply unbeatable!
             </p>
             <p className="font-semibold text-white pt-2">
               Receive Specialized Car Repair Services in the Germiston.

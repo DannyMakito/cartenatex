@@ -98,23 +98,25 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
               className="bg-white w-full max-w-2xl rounded-lg shadow-2xl pointer-events-auto relative overflow-hidden"
             >
               {/* Header */}
-              <div className="bg-swiss-red p-6 text-white flex justify-between items-center">
+              <div className="bg-swiss-red p-4 md:p-6 text-white flex justify-between items-center">
                 <div>
-                  <h2 className="text-2xl font-black uppercase tracking-tight">Book Appointment</h2>
-                  <p className="text-sm opacity-90">Expert Service for Your Luxury Vehicle</p>
+                  <h2 className="text-xl md:text-2xl font-black uppercase tracking-tight">Book Appointment</h2>
+                  <p className="text-xs md:text-sm opacity-90">Expert Service for Your Luxury Vehicle</p>
                 </div>
                 <button 
                   onClick={onClose}
                   className="p-2 hover:bg-white/20 rounded-full transition-colors"
                 >
-                  <X size={24} />
+                  <X size={20} className="md:w-6 md:h-6" />
                 </button>
               </div>
 
+
               {/* Form */}
-              <div className="p-8">
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="p-5 md:p-8">
+                <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+
                     <div className="space-y-1">
                       <label className="text-xs font-bold text-gray-500 uppercase">Full Name *</label>
                       <input 
@@ -154,7 +156,8 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                     />
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
+
                     <div className="space-y-1">
                       <label className="text-xs font-bold text-gray-500 uppercase">Vehicle Make *</label>
                       <select 
@@ -203,14 +206,15 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                     <button 
                       type="submit"
                       disabled={isSubmitting || status === 'success'}
-                      className={`w-full py-4 rounded font-bold uppercase tracking-widest transition-all shadow-lg active:scale-[0.98] flex items-center justify-center gap-2 ${
+                      className={`w-full py-3 md:py-4 rounded font-bold uppercase tracking-widest transition-all shadow-lg active:scale-[0.98] flex items-center justify-center gap-2 ${
                         status === 'success' 
                           ? 'bg-green-600 text-white cursor-default' 
                           : status === 'error'
                           ? 'bg-swiss-red text-white hover:bg-red-700'
                           : 'bg-black text-white hover:bg-swiss-red'
-                      } disabled:opacity-70 disabled:cursor-not-allowed`}
+                      } disabled:opacity-70 disabled:cursor-not-allowed text-sm md:text-base`}
                     >
+
                       {isSubmitting ? (
                         <>
                           <Loader2 className="animate-spin" size={20} />

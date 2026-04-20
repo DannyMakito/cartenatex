@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
               <span className="text-white font-black text-2xl tracking-widest uppercase">CARTENATEX</span>
             </div>
             <p className="mb-6 leading-relaxed">
-              Cartenatex Auto Services with 10 years of combined dealership experience has many branches across the UAE providing luxury auto repair & maintenance services.
+              Cartenatex R and R Automotive Services with 10 years of combined dealership experience has many branches across the UAE providing luxury auto repair & maintenance services.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="#" className="flex items-center hover:text-swiss-red"><MapPin size={14} className="mr-1" /> South africa</a>
