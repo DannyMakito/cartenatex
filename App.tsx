@@ -12,6 +12,7 @@ import BrandDetailsPage from './pages/BrandDetailsPage';
 import ShopPage from './pages/ShopPage';
 import ProductDetailsPage from './pages/ProductDetailsPage';
 import CheckoutPage from './pages/CheckoutPage';
+import AboutPage from './pages/AboutPage';
 import CartDrawer from './components/CartDrawer';
 import { CartProvider } from './context/CartContext';
 
@@ -40,6 +41,7 @@ function App() {
               <Route path="/shop/:id" element={<ProductDetailsPage />} />
               <Route path="/checkout" element={<CheckoutPage />} />
 
+              <Route path="/about" element={<AboutPage onBook={openBooking} />} />
               {/* Fallback for other routes can go to Home */}
               <Route path="*" element={<Home onBook={openBooking} />} />
             </Routes>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const AboutBanner: React.FC = () => {
   return (
@@ -45,9 +46,12 @@ const AboutBanner: React.FC = () => {
             transition={{ delay: 0.4 }}
             className="mt-8"
           >
-            <button className="bg-swiss-red hover:bg-red-700 text-white px-8 py-3 font-bold uppercase transition-colors duration-300 rounded shadow-lg">
+            <Link 
+              to="/about"
+              className="inline-block bg-swiss-red hover:bg-red-700 text-white px-8 py-3 font-bold uppercase transition-colors duration-300 rounded shadow-lg"
+            >
               Read More
-            </button>
+            </Link>
           </motion.div>
         </div>
       </div>

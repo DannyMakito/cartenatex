@@ -70,7 +70,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
       <div className="bg-black text-white text-sm py-2 hidden md:block">
         <div className="container mx-auto px-4 flex justify-between items-center">
           <div className="flex items-center space-x-6">
-            <a href="tel:081 384 2307" className="flex items-center hover:text-swiss-red transition-colors">
+            <a href="tel:0118250184" className="flex items-center hover:text-swiss-red transition-colors">
               <Phone size={16} className="mr-2 text-swiss-red" />
               <span className="font-bold">011 825 0184</span>
             </a>
@@ -236,7 +236,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
               </a>
               <div className="pt-4 flex items-center justify-center space-x-2 text-gray-500 text-sm">
                 <MapPin size={16} className="text-swiss-red" />
-                <span>Johannesburg, South Africa</span>
+                <span>273 Victoria St, Germiston</span>
               </div>
             </div>
           </div>

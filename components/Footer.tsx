@@ -51,10 +51,15 @@ const Footer: React.FC = () => {
             <p className="mb-6 leading-relaxed">
               Cartenatex R and R Automotive Services with 10 years of combined dealership experience has many branches across the UAE providing luxury auto repair & maintenance services.
             </p>
+            <div className="mb-4">
+              <p className="text-gray-400 text-sm">
+                <MapPin size={14} className="inline mr-1" /> 273 Victoria Street, George Town, Germiston, 1401
+              </p>
+            </div>
             <div className="flex flex-wrap gap-4">
               <a href="#" className="flex items-center hover:text-swiss-red"><MapPin size={14} className="mr-1" /> South africa</a>
               <a href="#" className="flex items-center hover:text-swiss-red"><MapPin size={14} className="mr-1" /> Guateng</a>
-              <a href="#" className="flex items-center hover:text-swiss-red"><MapPin size={14} className="mr-1" /> Gemiston</a>
+              <a href="#" className="flex items-center hover:text-swiss-red"><MapPin size={14} className="mr-1" /> Germiston</a>
             </div>
           </div>
 
@@ -92,12 +97,17 @@ const Footer: React.FC = () => {
             <h4 className="text-white text-lg font-bold uppercase mb-4">Contact</h4>
             <ul className="space-y-3">
               <li>
-                <a href="tel:600579477" className="flex items-center hover:text-swiss-red">
-                  <Phone size={16} className="mr-2" />060 300 5169
+                <a href="tel:0118250184" className="flex items-center hover:text-swiss-red">
+                  <Phone size={16} className="mr-2" />011 825 0184 (Office)
                 </a>
               </li>
               <li>
-                <a href="mailto:hello@swissauto.ae" className="flex items-center hover:text-swiss-red">
+                <a href="tel:0823376187" className="flex items-center hover:text-swiss-red">
+                  <Phone size={16} className="mr-2" />082 337 6187 (Mobile)
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@cartenatex.co.za" className="flex items-center hover:text-swiss-red">
                   <Mail size={16} className="mr-2" /> info@cartenatex.co.za
                 </a>
               </li>

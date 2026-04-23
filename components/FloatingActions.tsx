@@ -51,7 +51,7 @@ const FloatingActions: React.FC<FloatingActionsProps> = ({ onBook }) => {
         className="fixed bottom-6 left-6 z-40"
       >
         <a 
-          href="tel:0603005169" 
+          href="tel:0118250184" 
           className="flex items-center justify-center w-14 h-14 bg-swiss-red text-white rounded-full shadow-lg hover:scale-110 transition-transform"
         >
           <Phone size={24} />
