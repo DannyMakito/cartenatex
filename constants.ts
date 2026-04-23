@@ -1,7 +1,7 @@
 import { NavItem, ServiceItem, BenefitItem, FAQItem, DetailedServiceItem, BrandData, Product } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'About', href: '/#about' },
+  { label: 'About', href: '/about' },
   { label: 'Offers', href: '/#offers' },
   { label: 'Brands', href: '/brands' },
   { label: 'Services', href: '/services' },
@@ -70,7 +70,7 @@ export const SERVICES: ServiceItem[] = [
   {
     title: 'Mechanical Services',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcKY7NPeHhWq74BBZuMvYKTdtJogl5SDSjkQ&s',
-    items: ['Axle/ Driveshaft Repair', 'Brake Repair', 'Gearbox Repair', 'Suspension Repair', 'Transmission Repair']
+    items: ['Axle/ Driveshaft Repair', 'Brake and clutch Repair', 'Gearbox Repair', 'Suspension Repair', 'Transmission Repair']
   },
   {
     title: 'Electrical Services',
@@ -113,7 +113,7 @@ export const ALL_SERVICES: DetailedServiceItem[] = [
     link: "/services/axle-driveshaft-repair"
   },
   {
-    title: "Brake Repair",
+    title: "Brake and clutch Repair",
     image: "https://swissauto.ae/wp-content/uploads/2023/01/Brake-repair_content.jpg",
     description: "Did you know, that your vehicle brakes are the most carping requirement that ensures the safety of you & your loved ones?",
     link: "/services/brake-repair"
@@ -133,7 +133,7 @@ export const ALL_SERVICES: DetailedServiceItem[] = [
   {
     title: "Comfort System Repair",
     image: "https://swissauto.ae/wp-content/uploads/2023/01/Comfort-System-Service_content.jpg",
-    description: "Dubai is well known for its Luxury & comfortable rides and highly equipped cars that ensures comfort to the drivers.",
+    description: "South africa is well known for its Luxury & comfortable rides and highly equipped cars that ensures comfort to the drivers.",
     link: "/services/comfort-system-repair"
   },
   {
