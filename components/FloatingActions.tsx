@@ -36,7 +36,7 @@ const FloatingActions: React.FC<FloatingActionsProps> = ({ onBook }) => {
         className="fixed bottom-24 left-6 z-40"
       >
         <a 
-          href="https://wa.me/27603005169" 
+          href="https://wa.me/27823376187" 
           className="flex items-center justify-center w-14 h-14 bg-green-500 text-white rounded-full shadow-lg hover:scale-110 transition-transform"
         >
           <MessageCircle size={28} />
