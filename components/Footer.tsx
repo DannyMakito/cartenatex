@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
               <span className="text-white font-black text-2xl tracking-widest uppercase">CARTENATEX</span>
             </div>
             <p className="mb-6 leading-relaxed">
-              Cartenatex R and R Automotive Services with 10 years of combined dealership experience has many branches across the UAE providing luxury auto repair & maintenance services.
+              Cartenatex R and R Automotive Services with 10 years of combined dealership experience offers the best auto repair & maintenance services in Germiston.
             </p>
             <div className="mb-4">
               <p className="text-gray-400 text-sm">

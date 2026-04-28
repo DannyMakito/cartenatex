@@ -13,7 +13,7 @@ const BrandsPage: React.FC = () => {
             Our Brands
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            We specialize in a wide range of luxury and standard car brands. Select your car brand below to learn more about our specific services.
+            We specialize in a wide range of standard car brands. Select your car brand below to learn more about our specific services.
           </p>
         </div>
       </section>

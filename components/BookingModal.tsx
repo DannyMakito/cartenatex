@@ -101,7 +101,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
               <div className="bg-swiss-red p-4 md:p-6 text-white flex justify-between items-center">
                 <div>
                   <h2 className="text-xl md:text-2xl font-black uppercase tracking-tight">Book Appointment</h2>
-                  <p className="text-xs md:text-sm opacity-90">Expert Service for Your Luxury Vehicle</p>
+                  <p className="text-xs md:text-sm opacity-90">Expert Service for Your Vehicle</p>
                 </div>
                 <button 
                   onClick={onClose}
@@ -174,7 +174,7 @@ const BookingModal: React.FC<BookingModalProps> = ({ isOpen, onClose }) => {
                         <option value="Porsche">Porsche</option>
                         <option value="Range Rover">Range Rover</option>
                         <option value="Volkswagen">Volkswagen</option>
-                        <option value="Other">Other Luxury</option>
+                        <option value="Other">Other</option>
                       </select>
                     </div>
                     <div className="space-y-1">

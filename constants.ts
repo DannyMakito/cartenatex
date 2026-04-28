@@ -90,12 +90,12 @@ export const SERVICES: ServiceItem[] = [
   {
     title: 'Service Packages',
     image: 'https://www.rmi.org.za/wp-content/uploads/sites/12/2020/10/Summer-car-maintenance-tips.jpg',
-    items: ['Luxury Car Service Packages', 'Service & Warranty Packages']
+    items: ['Car Service Packages', 'Service & Warranty Packages']
   },
   {
     title: 'Extended Warranty',
     image: 'https://plus.unsplash.com/premium_photo-1661932729990-ac67192d26bf?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    items: ['New Cars Warranty Packages', 'Pre-Owned Cars Warranty Packages', 'Luxury Cars Warranty Packages']
+    items: ['New Cars Warranty Packages', 'Pre-Owned Cars Warranty Packages', 'Cars Warranty Packages']
   }
 ];
 
@@ -133,7 +133,7 @@ export const ALL_SERVICES: DetailedServiceItem[] = [
   {
     title: "Comfort System Repair",
     image: "https://swissauto.ae/wp-content/uploads/2023/01/Comfort-System-Service_content.jpg",
-    description: "South africa is well known for its Luxury & comfortable rides and highly equipped cars that ensures comfort to the drivers.",
+    description: "South africa is well known for its comfortable rides and highly equipped cars that ensures comfort to the drivers.",
     link: "/services/comfort-system-repair"
   },
   {
@@ -264,7 +264,7 @@ export const FAQS: FAQItem[] = [
   },
   {
     question: 'What makes  cartenatex unique?',
-    answer: 'Our state-of-the-art facilities, expert technicians, dealership-quality equipment, and competitive pricing make us the preferred choice for  car owners.'
+    answer: 'Our state-of-the-art facilities, expert technicians, dealership-quality equipment, and competitive pricing make us the preferred choice for car owners.'
   }
 ];
 

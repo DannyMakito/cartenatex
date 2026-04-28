@@ -23,7 +23,7 @@ const Services: React.FC = () => {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-5xl font-black text-gray-900 leading-tight max-w-4xl mx-auto"
           >
-            To Our Customers At Our Luxury Car Service Center
+            To Our Customers At Our Car Service Center
           </motion.h2>
         </div>
 
