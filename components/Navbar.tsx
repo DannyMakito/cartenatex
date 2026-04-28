@@ -75,7 +75,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
               <span className="font-bold">011 825 0184</span>
             </a>
             <span className="hidden lg:inline text-gray-400">|</span>
-            <a href="https://wa.me/27603005169" className="flex items-center hover:text-swiss-red transition-colors">
+            <a href="https://wa.me/27823376187 " className="flex items-center hover:text-swiss-red transition-colors">
               <span className="font-bold">WhatsApp: 060 300 5169</span>
             </a>
           </div>
