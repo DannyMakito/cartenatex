@@ -133,6 +133,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
             </nav>
 
             <div className="flex items-center space-x-4">
+              {/* 
               <button
                 onClick={openCart}
                 className="relative p-2 text-gray-800 hover:text-swiss-red transition-colors"
@@ -145,6 +146,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
                   </span>
                 )}
               </button>
+              */}
 
               <div className="hidden md:block">
                 <button

@@ -5,11 +5,13 @@ import { motion } from 'framer-motion';
 import { PRODUCTS } from '../constants';
 import { useCart } from '../context/CartContext';
 import { Check, Truck, Shield } from 'lucide-react';
+import QuoteModal from '../components/QuoteModal';
 
 const ProductDetailsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { addToCart } = useCart();
   const [activeTab, setActiveTab] = React.useState('description');
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = React.useState(false);
   
   const product = PRODUCTS.find(p => p.id === id);
 
@@ -57,22 +59,30 @@ const ProductDetailsPage: React.FC = () => {
                   {product.name}
                 </h1>
                 
-                <div className="text-3xl font-mono font-bold text-gray-900 mb-8 flex items-baseline gap-2">
-                  <span className="text-lg font-sans font-medium text-gray-400">ZAR</span>
-                  <span className="text-2xl font-sans font-black text-gray-900">R</span>
-                  {product.price.toLocaleString()}
+                <div className="text-sm font-black text-gray-400 uppercase tracking-widest mb-8 flex items-baseline gap-2">
+                  Price on Request
                 </div>
 
-                {/* Add to Cart */}
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <button 
-                    onClick={() => addToCart(product)}
-                    className="flex-1 bg-swiss-red text-white py-4 px-8 rounded-lg font-bold uppercase hover:bg-red-700 active:scale-[0.98] transition-all shadow-md shadow-swiss-red/20"
-                  >
-                    Add to Cart
-                  </button>
-                  <button className="px-8 py-4 border border-gray-200 text-gray-500 rounded-lg font-bold uppercase hover:bg-gray-50 transition-colors">
-                    Favourite
+                {/* Request Quotation */}
+                <div className="flex flex-col gap-4 mb-8">
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <a 
+                      href={`https://wa.me/27823376187?text=Hi, I would like to request a quotation for the XTool ${product.name}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-swiss-red text-white py-4 px-8 rounded-lg font-bold uppercase text-center hover:bg-red-700 active:scale-[0.98] transition-all shadow-md shadow-swiss-red/20 flex items-center justify-center gap-2"
+                    >
+                      WhatsApp Quote
+                    </a>
+                    <button 
+                      onClick={() => setIsQuoteModalOpen(true)}
+                      className="flex-1 bg-gray-900 text-white py-4 px-8 rounded-lg font-bold uppercase text-center hover:bg-black active:scale-[0.98] transition-all shadow-md shadow-black/10 flex items-center justify-center gap-2"
+                    >
+                      Email Quote
+                    </button>
+                  </div>
+                  <button className="w-full py-3 border border-gray-200 text-gray-500 rounded-lg font-bold uppercase hover:bg-gray-50 transition-colors text-xs tracking-widest">
+                    Add to Favourites
                   </button>
                 </div>
 
@@ -213,6 +223,12 @@ const ProductDetailsPage: React.FC = () => {
             </div>
           </div>
         </div>
+
+        <QuoteModal 
+          isOpen={isQuoteModalOpen} 
+          onClose={() => setIsQuoteModalOpen(false)} 
+          productName={product.name}
+        />
       </div>
     </div>
   );

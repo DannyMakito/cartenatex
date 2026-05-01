@@ -14,32 +14,23 @@ const categories = [
   { id: 'Smart Diagnostic', label: 'Smart Diagnostic' },
 ];
 
-const priceRanges = [
-  { id: 'all', label: 'All Prices' },
-  { id: 'under-10k', label: 'Under R10,000', min: 0, max: 10000 },
-  { id: '10k-25k', label: 'R10,000 - R25,000', min: 10000, max: 25000 },
-  { id: '25k-50k', label: 'R25,000 - R50,000', min: 25000, max: 50000 },
-  { id: 'over-50k', label: 'Over R50,000', min: 50000, max: Infinity },
-];
+import QuoteModal from '../components/QuoteModal';
 
 const ShopPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
 
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter(product => {
       const categoryMatch = selectedCategory === 'all' || product.category === selectedCategory;
       
-      const priceRange = priceRanges.find(r => r.id === selectedPriceRange);
-      const priceMatch = !priceRange || selectedPriceRange === 'all' || (product.price >= priceRange.min && product.price <= priceRange.max);
-      
       const searchMatch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                           product.description.toLowerCase().includes(searchQuery.toLowerCase());
 
-      return categoryMatch && priceMatch && searchMatch;
+      return categoryMatch && searchMatch;
     });
-  }, [selectedCategory, selectedPriceRange, searchQuery]);
+  }, [selectedCategory, searchQuery]);
 
   return (
     <div className="bg-[#fcfcfc] min-h-screen pt-10 pb-20 font-sans">
@@ -90,19 +81,26 @@ const ShopPage: React.FC = () => {
               </div>
               
               <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
-                <h3 className="font-black text-xl mb-6 uppercase tracking-wider text-gray-900 border-b-2 border-swiss-red inline-block pb-1">Price Range</h3>
-                <ul className="space-y-4 text-gray-500 font-bold text-sm">
-                  {priceRanges.map((range) => (
-                    <li 
-                      key={range.id}
-                      onClick={() => setSelectedPriceRange(range.id)}
-                      className={`${selectedPriceRange === range.id ? 'text-swiss-red' : 'hover:text-gray-900'} flex items-center gap-3 cursor-pointer transition-colors`}
-                    >
-                      <span className={`w-1.5 h-1.5 rounded-full ${selectedPriceRange === range.id ? 'bg-swiss-red' : 'bg-gray-200'}`}></span>
-                      {range.label}
-                    </li>
-                  ))}
-                </ul>
+                <h3 className="font-black text-xl mb-6 uppercase tracking-wider text-gray-900 border-b-2 border-swiss-red inline-block pb-1">Need Help?</h3>
+                <p className="text-gray-500 font-bold text-sm leading-relaxed">
+                  Can't find the specific tool you're looking for? Contact our experts for a personalized recommendation.
+                </p>
+                <div className="flex flex-col gap-3 mt-6">
+                  <a 
+                    href="https://wa.me/27823376187" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block w-full bg-swiss-red text-white text-center py-3 rounded-xl font-black uppercase text-xs tracking-widest hover:bg-red-700 transition-all shadow-md shadow-swiss-red/10"
+                  >
+                    WhatsApp Us
+                  </a>
+                  <button 
+                    onClick={() => setIsQuoteModalOpen(true)}
+                    className="block w-full bg-gray-900 text-white text-center py-3 rounded-xl font-black uppercase text-xs tracking-widest hover:bg-black transition-all shadow-md shadow-black/10"
+                  >
+                    Email Inquiry
+                  </button>
+                </div>
               </div>
             </div>
           </aside>
@@ -147,9 +145,8 @@ const ShopPage: React.FC = () => {
                           {product.name}
                         </h3>
                         <div className="flex items-center justify-between">
-                          <div className="text-2xl font-mono font-bold text-gray-900">
-                            <span className="text-lg font-sans font-black text-gray-900 mr-1">R</span>
-                            {product.price.toLocaleString()}
+                          <div className="text-sm font-black text-gray-400 uppercase tracking-widest">
+                            Price on Request
                           </div>
                           <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-swiss-red group-hover:text-white transition-all text-gray-400">
                             <Truck size={18} />
@@ -170,7 +167,6 @@ const ShopPage: React.FC = () => {
                 <button 
                   onClick={() => {
                     setSelectedCategory('all');
-                    setSelectedPriceRange('all');
                     setSearchQuery('');
                   }}
                   className="mt-6 text-swiss-red font-black uppercase text-sm border-b-2 border-swiss-red pb-1 hover:text-gray-900 hover:border-gray-900 transition-all"
@@ -181,6 +177,10 @@ const ShopPage: React.FC = () => {
             )}
           </div>
         </div>
+        <QuoteModal 
+          isOpen={isQuoteModalOpen} 
+          onClose={() => setIsQuoteModalOpen(false)} 
+        />
       </div>
     </div>
   );
