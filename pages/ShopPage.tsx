@@ -1,48 +1,107 @@
 
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { PRODUCTS } from '../constants';
-import { Filter } from 'lucide-react';
+import { Filter, Truck, Search } from 'lucide-react';
+
+const categories = [
+  { id: 'all', label: 'All XTool Scanners' },
+  { id: 'EV Diagnostic', label: 'EV Diagnostics' },
+  { id: 'Advanced Diagnostic', label: 'Advanced Systems' },
+  { id: 'Flagship System', label: 'Flagship Systems' },
+  { id: 'Heavy Duty', label: 'Heavy Duty' },
+  { id: 'Smart Diagnostic', label: 'Smart Diagnostic' },
+];
+
+const priceRanges = [
+  { id: 'all', label: 'All Prices' },
+  { id: 'under-10k', label: 'Under R10,000', min: 0, max: 10000 },
+  { id: '10k-25k', label: 'R10,000 - R25,000', min: 10000, max: 25000 },
+  { id: '25k-50k', label: 'R25,000 - R50,000', min: 25000, max: 50000 },
+  { id: 'over-50k', label: 'Over R50,000', min: 50000, max: Infinity },
+];
 
 const ShopPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const filteredProducts = useMemo(() => {
+    return PRODUCTS.filter(product => {
+      const categoryMatch = selectedCategory === 'all' || product.category === selectedCategory;
+      
+      const priceRange = priceRanges.find(r => r.id === selectedPriceRange);
+      const priceMatch = !priceRange || selectedPriceRange === 'all' || (product.price >= priceRange.min && product.price <= priceRange.max);
+      
+      const searchMatch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                          product.description.toLowerCase().includes(searchQuery.toLowerCase());
+
+      return categoryMatch && priceMatch && searchMatch;
+    });
+  }, [selectedCategory, selectedPriceRange, searchQuery]);
+
   return (
-    <div className="bg-white min-h-screen pt-10 pb-20">
+    <div className="bg-[#fcfcfc] min-h-screen pt-10 pb-20 font-sans">
       <div className="container mx-auto px-4">
         
         {/* Header */}
-        <div className="flex justify-between items-end mb-8 border-b border-gray-200 pb-4">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 border-b border-gray-200 pb-8 gap-4">
           <div>
-            <h1 className="text-3xl md:text-4xl font-black uppercase text-gray-900">Diagnostic Shop</h1>
-            <p className="text-gray-500 mt-2">Professional Scanners & Tools</p>
+            <h1 className="text-4xl md:text-5xl font-black uppercase text-gray-900 tracking-tighter">Diagnostic Shop</h1>
+            <p className="text-gray-500 mt-2 text-lg font-medium">Professional XTool Scanners & Tools</p>
           </div>
-          <button className="flex items-center gap-2 text-gray-900 font-medium hover:text-swiss-red transition-colors md:hidden">
-            <Filter size={20} /> Filter
-          </button>
+          
+          <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+            <div className="relative group">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-swiss-red transition-colors" size={18} />
+              <input 
+                type="text" 
+                placeholder="Search products..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-11 pr-6 py-3 bg-white border border-gray-200 rounded-xl font-bold text-gray-700 focus:outline-none focus:border-swiss-red transition-all shadow-sm w-full sm:w-64"
+              />
+            </div>
+            <button className="flex items-center justify-center gap-2 bg-white border border-gray-200 px-6 py-3 rounded-xl font-bold text-gray-700 hover:border-swiss-red transition-all shadow-sm">
+              <Filter size={18} className="text-swiss-red" /> Filter
+            </button>
+          </div>
         </div>
 
-        <div className="flex gap-8">
+        <div className="flex flex-col lg:flex-row gap-12">
           {/* Sidebar Filters (Desktop) */}
-          <aside className="w-64 hidden md:block flex-shrink-0">
-            <div className="sticky top-24 space-y-8">
-              <div>
-                <h3 className="font-bold text-lg mb-4">Categories</h3>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="font-medium text-black cursor-pointer">All Scanners</li>
-                  <li className="hover:text-black cursor-pointer transition-colors">Professional</li>
-                  <li className="hover:text-black cursor-pointer transition-colors">Handheld</li>
-                  <li className="hover:text-black cursor-pointer transition-colors">Heavy Duty</li>
-                  <li className="hover:text-black cursor-pointer transition-colors">Accessories</li>
+          <aside className="w-full lg:w-72 flex-shrink-0">
+            <div className="sticky top-24 space-y-10">
+              <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                <h3 className="font-black text-xl mb-6 uppercase tracking-wider text-gray-900 border-b-2 border-swiss-red inline-block pb-1">Categories</h3>
+                <ul className="space-y-4 text-gray-500 font-bold text-sm">
+                  {categories.map((cat) => (
+                    <li 
+                      key={cat.id}
+                      onClick={() => setSelectedCategory(cat.id)}
+                      className={`${selectedCategory === cat.id ? 'text-swiss-red' : 'hover:text-gray-900'} flex items-center gap-3 cursor-pointer transition-colors`}
+                    >
+                      <span className={`w-1.5 h-1.5 rounded-full ${selectedCategory === cat.id ? 'bg-swiss-red' : 'bg-gray-200'}`}></span>
+                      {cat.label}
+                    </li>
+                  ))}
                 </ul>
               </div>
               
-              <div>
-                <h3 className="font-bold text-lg mb-4">Price Range</h3>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="hover:text-black cursor-pointer transition-colors">Under R1,000</li>
-                  <li className="hover:text-black cursor-pointer transition-colors">R1,000 - R2,500</li>
-                  <li className="hover:text-black cursor-pointer transition-colors">R2,500 - R5,000</li>
-                  <li className="hover:text-black cursor-pointer transition-colors">Over R5,000</li>
+              <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                <h3 className="font-black text-xl mb-6 uppercase tracking-wider text-gray-900 border-b-2 border-swiss-red inline-block pb-1">Price Range</h3>
+                <ul className="space-y-4 text-gray-500 font-bold text-sm">
+                  {priceRanges.map((range) => (
+                    <li 
+                      key={range.id}
+                      onClick={() => setSelectedPriceRange(range.id)}
+                      className={`${selectedPriceRange === range.id ? 'text-swiss-red' : 'hover:text-gray-900'} flex items-center gap-3 cursor-pointer transition-colors`}
+                    >
+                      <span className={`w-1.5 h-1.5 rounded-full ${selectedPriceRange === range.id ? 'bg-swiss-red' : 'bg-gray-200'}`}></span>
+                      {range.label}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -50,35 +109,76 @@ const ShopPage: React.FC = () => {
 
           {/* Product Grid */}
           <div className="flex-1">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6">
-              {PRODUCTS.map((product) => (
-                <Link to={`/shop/${product.id}`} key={product.id} className="group">
-                  {/* Image Container */}
-                  <div className="aspect-square bg-gray-100 mb-4 overflow-hidden relative rounded-sm">
-                    <img 
-                      src={product.image} 
-                      alt={product.name}
-                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-in-out mix-blend-multiply"
-                    />
-                    {/* Badge */}
-                    <div className="absolute top-2 left-2 bg-white px-2 py-1 text-xs font-bold uppercase tracking-wider">
-                      New
-                    </div>
-                  </div>
+            <AnimatePresence mode="popLayout">
+              <motion.div 
+                layout
+                className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8"
+              >
+                {filteredProducts.map((product) => (
+                  <motion.div
+                    layout
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.3 }}
+                    key={product.id}
+                  >
+                    <Link 
+                      to={`/shop/${product.id}`} 
+                      className="group block h-full bg-white rounded-2xl border border-gray-100 p-4 shadow-sm hover:shadow-xl hover:shadow-swiss-red/5 transition-all duration-300"
+                    >
+                      {/* Image Container */}
+                      <div className="aspect-square bg-white mb-6 overflow-hidden relative rounded-xl border border-gray-50 p-6 flex items-center justify-center">
+                        <img 
+                          src={product.image} 
+                          alt={product.name}
+                          className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 ease-in-out mix-blend-multiply"
+                        />
+                        {/* Badge */}
+                        <div className="absolute top-4 left-4 bg-swiss-red text-white px-3 py-1 text-[10px] font-black uppercase tracking-widest rounded-full">
+                          New
+                        </div>
+                      </div>
 
-                  {/* Product Info */}
-                  <div>
-                    <div className="text-swiss-red font-medium text-sm mb-1">{product.category}</div>
-                    <h3 className="text-gray-900 font-bold text-lg leading-tight mb-2 group-hover:text-gray-600 transition-colors">
-                      {product.name}
-                    </h3>
-                    <div className="text-gray-900 font-medium">
-                      R {product.price.toLocaleString()}
-                    </div>
-                  </div>
-                </Link>
-              ))}
-            </div>
+                      {/* Product Info */}
+                      <div className="px-2 pb-2">
+                        <div className="text-swiss-red font-bold text-[11px] uppercase tracking-widest mb-2">{product.category}</div>
+                        <h3 className="text-gray-900 font-black text-xl leading-tight mb-4 group-hover:text-swiss-red transition-colors min-h-[3rem]">
+                          {product.name}
+                        </h3>
+                        <div className="flex items-center justify-between">
+                          <div className="text-2xl font-mono font-bold text-gray-900">
+                            <span className="text-lg font-sans font-black text-gray-900 mr-1">R</span>
+                            {product.price.toLocaleString()}
+                          </div>
+                          <div className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center group-hover:bg-swiss-red group-hover:text-white transition-all text-gray-400">
+                            <Truck size={18} />
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </AnimatePresence>
+
+            {filteredProducts.length === 0 && (
+              <div className="text-center py-20 bg-white rounded-2xl border border-gray-100 shadow-sm">
+                <Filter size={48} className="mx-auto text-gray-200 mb-4" />
+                <h3 className="text-xl font-black text-gray-900 uppercase">No products found</h3>
+                <p className="text-gray-500 font-bold mt-2">Try adjusting your filters or search query</p>
+                <button 
+                  onClick={() => {
+                    setSelectedCategory('all');
+                    setSelectedPriceRange('all');
+                    setSearchQuery('');
+                  }}
+                  className="mt-6 text-swiss-red font-black uppercase text-sm border-b-2 border-swiss-red pb-1 hover:text-gray-900 hover:border-gray-900 transition-all"
+                >
+                  Clear all filters
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -87,3 +187,4 @@ const ShopPage: React.FC = () => {
 };
 
 export default ShopPage;
+

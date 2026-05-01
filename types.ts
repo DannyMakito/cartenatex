@@ -56,6 +56,10 @@ export interface Product {
   image: string;
   description: string;
   features: string[];
+  packingList?: string[];
+  techSpecs?: string[];
+  reviewVideo?: string;
+  detailLink?: string;
 }
 
 export interface CartItem extends Product {
