@@ -610,6 +610,65 @@ export const PRODUCTS: Product[] = [
     ],
     reviewVideo: '',
     detailLink: 'https://www.scantooldepot.com/component/eshop/xtool/hd-guru?Itemid=0'
+  },
+  {
+    id: 'xtool-13',
+    name: 'OBD2 Code Reader – AD20 Pro',
+    category: 'Code Reader',
+    price: 0,
+    image: 'https://en.xtooltech.com/uploads/images/obd2-code-reader-ad20pro-bulk.webp',
+    description: 'Advancer AD20 Pro is a smart OBD dongle that connects via Bluetooth to your smartphone for full-system diagnostics and maintenance light reset. It can read and clear fault codes on U.S., Asian, European, and Chinese vehicles from 1996 onwards, perform smog checks, vehicle deep checks, live data viewing, and battery health checks. The tool enables trip and fuel consumption recording, features integrated driving behavior monitoring, and offers free downloadable brand-specific software—empowering both diagnostics and driver skill improvement.',
+    features: [
+      'Utilizes Bluetooth connection to your smartphone for a wireless diagnostic experience',
+      'Reads and clears full-system fault codes from 1996+ vehicles across multiple regions',
+      'Offers maintenance light reset and smog check functionality',
+      'Includes live data viewing and battery health monitoring',
+      'Supports trip tracking and fuel consumption recording',
+      'Incorporates driving behavior monitoring to help improve driving skills',
+      'The XTOOL code reader provides free downloadable, brand-specific software with no extra cost',
+      'Compact and lightweight design—ideal for portable diagnostics'
+    ],
+    techSpecs: [
+      'Processor：ARM Cortex-M4',
+      'Wireless：BLE 5.0',
+      'Communication Method：Bluetooth',
+      'Working Voltage：9-16V',
+      'Working Current：100mA @ 12V',
+      'Sleeping Current：100mA @ 12V',
+      'Working Temperature：-20 to 60℃',
+      'Weight：~40g'
+    ]
+  },
+  {
+    id: 'xtool-14',
+    name: 'A30M OBD2 Code Reader',
+    category: 'Code Reader',
+    price: 0,
+    image: 'https://en.xtooltech.com/uploads/images/obd2-code-reader-a30m-bulk.webp',
+    description: 'XTOOL Anyscan A30M is a compact wireless OBD2 scanner designed for DIY enthusiasts and professional technicians, compatible with iOS and Android platforms. Our XTOOL A30 m provides full-system diagnostics, bi-directional control, and over 26 maintenance service functions, including oil reset, EPB, TPMS, ABS bleeding, and more. The newly added FCA AutoAuth feature supports 2018 and newer models of Jeep, Dodge, Chrysler, Porsche, Maserati, and Fiat, bypassing security restrictions for smooth diagnostics and full functionality.',
+    features: [
+      'Supports both iOS and Android platforms for broad compatibility',
+      'Provides full-system diagnostics covering engine, transmission, ABS, SRS, and more',
+      'Equipped with bi-directional control for active tests like fuel pump, injector, and A/C clutch',
+      'Offers over 26 maintenance service functions, including oil reset, EPB, TPMS, ABS bleeding, etc.',
+      'FCA AutoAuth supports 2018 and newer specified models for smooth diagnostics',
+      'Auto VIN recognition enables quick vehicle identification',
+      'The OBD2 XTOOL code reader is compact and lightweight, easy to carry and use',
+      'Simple and intuitive operation for both professional technicians and DIY enthusiast'
+    ],
+    techSpecs: [
+      'Processor：STM32',
+      'Display：1\'\'',
+      'Connectivity：OBD',
+      'Battery (mAh)：100',
+      'Bluetooth：BLE 5.2',
+      'Working Temp.：0~40°℃',
+      'Storage Temp.：-10~50℃',
+      'Vehicle Volt.：9~36V',
+      'Free Update：Lifetime',
+      'Warranty：2 YEARS',
+      'Compatible Protocol：CAN FD'
+    ]
   }
 ];
 

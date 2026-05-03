@@ -12,6 +12,7 @@ const categories = [
   { id: 'Flagship System', label: 'Flagship Systems' },
   { id: 'Heavy Duty', label: 'Heavy Duty' },
   { id: 'Smart Diagnostic', label: 'Smart Diagnostic' },
+  { id: 'Code Reader', label: 'Code Readers' },
 ];
 
 import QuoteModal from '../components/QuoteModal';
