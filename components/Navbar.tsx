@@ -90,20 +90,21 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
 
       {/* Main Nav */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-lg py-2' : 'bg-white/95 backdrop-blur-sm py-4'
+        className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black shadow-lg py-2' : 'bg-black/95 backdrop-blur-sm py-4'
           }`}
       >
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <Link to="/" className="block">
+              <Link to="/" className="flex items-center">
                 <img
-                  src="/images/cbg.png"
-                  alt="Cartenatex Logo"
+                  src="/images/cbrake.png"
+                  alt="C"
                   style={{ height: '54px', width: 'auto' }}
                   className="shadow-sm"
                 />
+                <span className="text-white text-3xl font-extrabold tracking-wide ml-1">ARTENATEX</span>
               </Link>
             </div>
 
@@ -120,7 +121,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
                   <div key={item.label} className="relative group">
                     <Link
                       to={item.href}
-                      className={`text-gray-800 font-bold hover:text-swiss-red transition-colors py-2 flex items-center ${isActive ? 'text-swiss-red' : ''}`}
+                      className={`text-white font-bold hover:text-swiss-red transition-colors py-2 flex items-center ${isActive ? 'text-swiss-red' : ''}`}
                       onClick={(e) => handleNavClick(e, item.href)}
                     >
                       {item.label}
@@ -160,7 +161,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
               </div>
 
               <button
-                className="lg:hidden text-gray-800 p-2"
+                className="lg:hidden text-white p-2"
                 onClick={() => setIsOpen(!isOpen)}
               >
                 {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -179,22 +180,23 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
 
       {/* Mobile Menu Drawer */}
       <div
-        className={`lg:hidden fixed top-0 right-0 bottom-0 w-[85%] max-w-[400px] z-[110] bg-white shadow-2xl transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`lg:hidden fixed top-0 right-0 bottom-0 w-[85%] max-w-[400px] z-[110] bg-black shadow-2xl transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
       >
         <div className="flex flex-col h-full">
           {/* Mobile Menu Header */}
-          <div className="flex items-center justify-between p-4 border-b border-gray-100 bg-white">
-            <Link to="/" onClick={() => setIsOpen(false)} className="block">
+          <div className="flex items-center justify-between p-4 border-b border-gray-800 bg-black">
+            <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center">
               <img
-                src="/images/cbg.png"
-                alt="Cartenatex Logo"
+                src="/images/cbrake.png"
+                alt="C"
                 style={{ height: '40px', width: 'auto' }}
               />
+              <span className="text-white text-xl font-extrabold tracking-wide ml-1">ARTENATEX</span>
             </Link>
             <button
               onClick={() => setIsOpen(false)}
-              className="p-2 text-gray-800 hover:text-swiss-red transition-colors"
+              className="p-2 text-white hover:text-swiss-red transition-colors"
               aria-label="Close menu"
             >
               <X size={28} />
@@ -214,7 +216,7 @@ const Navbar: React.FC<NavbarProps> = ({ onBook }) => {
                 <Link
                   key={item.label}
                   to={item.href}
-                  className={`block text-xl font-bold py-4 border-b border-gray-50 transition-colors ${isActive ? 'text-swiss-red' : 'text-gray-800 hover:text-swiss-red'
+                  className={`block text-xl font-bold py-4 border-b border-gray-800 transition-colors ${isActive ? 'text-swiss-red' : 'text-white hover:text-swiss-red'
                     }`}
                   onClick={(e) => handleNavClick(e, item.href)}
                 >
