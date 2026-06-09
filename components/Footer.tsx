@@ -24,6 +24,12 @@ const Footer: React.FC = () => {
                  alt="RMI Certified" 
                  className="h-12 w-auto"
                />
+
+                <img 
+                 src="https://i.postimg.cc/KjSYBH32/aalogobg.png" 
+                 alt="RMI Certified" 
+                 className="h-12 w-auto"
+               />
                <div className="h-12 w-px bg-gray-300 mx-2"></div>
                <img 
                  src="https://vtlogo.com/wp-content/uploads/2020/04/motor-industry-workshop-association-miwa-vector-logo.png" 
@@ -31,6 +37,8 @@ const Footer: React.FC = () => {
                  className="h-12 w-auto" 
                />
              </div>
+
+             
           </div>
         </div>
 
