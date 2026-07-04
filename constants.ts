@@ -52,7 +52,7 @@ export const PRODUCTS: Product[] = [
         'Main Units: Tablet, VCI Box, USB3.0 Data Cable (Connect to PC), Charger for Tablet, Power Cable US, Power Cable EU, Power Cable UK',
         'Test Connectors: DB15 Main Cable, DB15 to USB3.0 Main Cable, Battery Clamp Cable, Cigar Lighter Cable, Jumper, Jumper Adapter, OBD-R16, ECONTROLS-4, WOODWARD-3, ISUZU-3, ISUZU-20, YUCHAI-4, DENSO-12, CUMMINS-16, CUMMINS-9, HITACHI-4, HITACHI-6, CAT-9, VOLVO-8, OBD II-16, HONDA-3, BMW-20, BENZ-14, BENZ-38, TOYOTA-17, MAZDA-17R, KIA-20, HYUNDAI/KIA-10, NISSAN-14, GM/DAEWOO-12, UNIVERSAL-3, SUZUKI-3, FIAT-3, CITROEN-2, AUDI-4, MITSUBISHI-12+16'
     ],
-    reviewVideo: 'https://www.youtube.com/watch?v=H8SlOViHJyY',
+    reviewVideo: '',
     detailLink: 'https://www.scantooldepot.com/component/eshop/xtool/n9ev?Itemid=0'
   },
   {
