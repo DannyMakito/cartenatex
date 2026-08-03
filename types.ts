@@ -13,11 +13,18 @@ export interface ServiceItem {
   items?: string[];
 }
 
-export interface DetailedServiceItem {
+export interface ServiceDetailData {
+  id: string;
   title: string;
   image: string;
-  description: string;
+  bannerImage: string;
+  shortDescription: string;
+  detailedDescription: string;
+  services: string[];
+  faqs: FAQItem[];
   link: string;
+  category?: string;
+  icon?: string;
 }
 
 export interface BenefitItem {

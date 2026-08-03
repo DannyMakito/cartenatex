@@ -7,6 +7,7 @@ import FloatingActions from './components/FloatingActions';
 import BookingModal from './components/BookingModal';
 import Home from './pages/Home';
 import ServicesPage from './pages/ServicesPage';
+import ServiceDetailsPage from './pages/ServiceDetailsPage';
 import BrandsPage from './pages/BrandsPage';
 import BrandDetailsPage from './pages/BrandDetailsPage';
 import ShopPage from './pages/ShopPage';
@@ -33,6 +34,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home onBook={openBooking} />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services/:serviceId" element={<ServiceDetailsPage />} />
               <Route path="/brands" element={<BrandsPage />} />
               <Route path="/brands/:brandId" element={<BrandDetailsPage />} />
               

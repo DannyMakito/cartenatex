@@ -1,4 +1,4 @@
-import { NavItem, ServiceItem, BenefitItem, FAQItem, DetailedServiceItem, BrandData, Product } from './types';
+import { NavItem, ServiceItem, BenefitItem, FAQItem, ServiceDetailData, BrandData, Product } from './types';
 
 export const NAV_ITEMS: NavItem[] = [
   { label: 'About', href: '/about' },
@@ -698,122 +698,571 @@ export const SERVICES: ServiceItem[] = [
   }
 ];
 
-export const ALL_SERVICES: DetailedServiceItem[] = [
+export const ALL_SERVICES: ServiceDetailData[] = [
   {
+    id: "ac-repair",
     title: "AC Repair",
     image: "https://swissauto.ae/wp-content/uploads/2021/04/AC-Repair-Content-Image.jpg",
-    description: "Is your car AC working properly? Or, Do you still feel the heat even after turning on the car AC?",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2021/04/AC-Repair-Content-Image.jpg",
+    shortDescription: "Is your car AC working properly? Or, Do you still feel the heat even after turning on the car AC?",
+    detailedDescription: "A comfortable cabin is essential, especially during the scorching summer months. Our AC repair service covers everything from refrigerant recharge, compressor replacement, and condenser repair to evaporative core services. Our certified technicians use the latest diagnostic equipment to pinpoint leaks and ensure your air conditioning system delivers crisp, cold air exactly as the manufacturer intended. We use only high-quality, OEM-approved parts backed by a warranty for your peace of mind.",
+    services: [
+      "AC Compressor Repair & Replacement",
+      "Condenser Repair & Replacement",
+      "Evaporative Core Repair",
+      "Refrigerant Recharge & Leak Detection",
+      "AC System Diagnosis & Performance Testing",
+      "Blower Motor & Resistor Repair",
+      "Receiver/Dryer Replacement"
+    ],
+    faqs: [
+      { question: "Why is my car AC blowing hot air?", answer: "This is typically due to low refrigerant from a leak, a failing compressor, or a clogged expansion valve." },
+      { question: "How often should I service my AC system?", answer: "We recommend an annual inspection and recharge before summer to keep the system running efficiently." },
+      { question: "Is a refrigerant top-up enough?", answer: "A top-up only masks a leak temporarily. We always locate and repair the root cause before recharging." }
+    ],
     link: "/services/ac-repair"
   },
   {
+    id: "axle-driveshaft-repair",
     title: "Axle/ Driveshaft Repair",
     image: "https://swissauto.ae/wp-content/uploads/2023/01/Drive-Axle-Content.jpg",
-    description: "Do you know, four-wheel-drive refers to cars with two axles providing torque or power to all the four wheels or axle ends at the same time?",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2023/01/Drive-Axle-Content.jpg",
+    shortDescription: "Do you know, four-wheel-drive refers to cars with two axles providing torque or power to all the four wheels or axle ends at the same time?",
+    detailedDescription: "Your axle and driveshaft are the backbone of your vehicle's power transfer system. Whether you drive a front-wheel-drive, rear-wheel-drive, or all-wheel-drive vehicle, any damage to these components can compromise performance, safety, and fuel efficiency. At Cartenatex, our specialists handle CV joint replacement, universal joint repair, axle assembly rebuilds, and differential services using precision tools and genuine components. We ensure proper alignment and balance to restore your vehicle's original handling characteristics.",
+    services: [
+      "CV Joint Replacement",
+      "Universal Joint Repair",
+      "Axle Assembly Rebuild & Replacement",
+      "Driveshaft Balancing & Alignment",
+      "Differential Repair & Fluid Change",
+      "Axle Shaft Seal Replacement"
+    ],
+    faqs: [
+      { question: "What causes a clicking noise when turning?", answer: "This usually indicates a worn CV joint, commonly found on the axle shafts of front-wheel-drive vehicles." },
+      { question: "Can I drive with a damaged driveshaft?", answer: "It's not safe. A failing driveshaft can cause loss of power to the wheels and may result in a serious accident." },
+      { question: "How long do axles typically last?", answer: "With proper maintenance, axles can last the lifetime of the vehicle, but driving conditions affect wear." }
+    ],
     link: "/services/axle-driveshaft-repair"
   },
   {
+    id: "brake-repair",
     title: "Brake and clutch Repair",
     image: "https://swissauto.ae/wp-content/uploads/2023/01/Brake-repair_content.jpg",
-    description: "Did you know, that your vehicle brakes are the most carping requirement that ensures the safety of you & your loved ones?",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2023/01/Brake-repair_content.jpg",
+    shortDescription: "Did you know, that your vehicle brakes are the most carping requirement that ensures the safety of you & your loved ones?",
+    detailedDescription: "Your brakes are the most critical safety system on your vehicle. We never compromise on quality when it comes to brake repairs. Our comprehensive service includes brake pad replacement, rotor and drum resurfacing or replacement, brake line inspection, fluid flush, and ABS system diagnostics. For manual transmissions, our clutch specialists handle everything from adjustment and hydraulic component replacement to complete clutch kit installation. We use premium OE-grade components and perform rigorous testing to ensure your brake system meets the highest safety standards.",
+    services: [
+      "Brake Pad & Shoe Replacement",
+      "Rotor & Drum Resurfacing/Re condition",
+      "Brake Fluid Flush & Replacement",
+      "Brake Line Inspection & Repair",
+      "ABS System Diagnosis & Repair",
+      "Clutch Replacement & Adjustment",
+      "Clutch Master & Slave Cylinder Repair"
+    ],
+    faqs: [
+      { question: "How do I know when my brake pads need replacing?", answer: "Squealing, grinding noises, reduced pedal feel, or a brake warning light indicate worn pads requiring immediate attention." },
+      { question: "Is it safe to drive on worn brake pads?", answer: "No. Continuing to drive can damage rotors, increase stopping distance, and cause hazardous driving conditions." },
+      { question: "When should I replace my clutch?", answer: "Signs include slipping gears, a hard clutch pedal, burning smell, or difficulty shifting gears." }
+    ],
     link: "/services/brake-repair"
   },
   {
+    id: "camera-radar-calibration",
     title: "Camera / Radar Calibration",
     image: "https://swissauto.ae/wp-content/uploads/2021/04/Camera-and-Radar-Calibration-Content-.jpg",
-    description: "Do you know, your drive can be more comfortable if you have all the car calibration and radar at the right place?",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2021/04/Camera-and-Radar-Calibration-Content-.jpg",
+    shortDescription: "Do you know, your drive can be more comfortable if you have all the car calibration and radar at the right place?",
+    detailedDescription: "Modern vehicles rely on advanced driver assistance systems (ADAS) like lane departure warnings, automatic emergency braking, and adaptive cruise control. These systems depend on cameras and radar sensors that must be precisely calibrated. At Cartenatex, we use state-of-the-art calibration equipment to ensure your sensors are correctly aligned to factory specifications. This is essential after windshield replacement, collision repairs, or suspension work. Proper calibration restores your vehicle's safety features and keeps you protected on the road.",
+    services: [
+      "Forward Camera Calibration",
+      "Radar Sensor Calibration",
+      "Lane Departure System Calibration",
+      "Adaptive Cruise Control Setup",
+      "Automatic Emergency Braking Calibration",
+      "Blind Spot Monitoring Calibration"
+    ],
+    faqs: [
+      { question: "Why does my car need camera calibration after a windshield replacement?", answer: "The camera is often mounted behind the windshield. Moving or replacing the glass shifts its position, requiring recalibration." },
+      { question: "Is calibration covered by insurance?", answer: "Many insurance policies cover ADAS recalibration after covered repairs. We recommend checking your policy for details." },
+      { question: "How long does calibration take?", answer: "The process typically takes 1-2 hours depending on the number of sensors and the vehicle model." }
+    ],
     link: "/services/camera-radar-calibration"
   },
   {
+    id: "car-software-repair-programming",
     title: "Car Software Repair & Programming",
     image: "https://swissauto.ae/wp-content/uploads/2023/01/Software-repair-Content.jpg",
-    description: "Have you ever observed that the control units in your car have chip lock or programs specifically designed for your car?",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2023/01/Software-repair-Content.jpg",
+    shortDescription: "Have you ever observed that the control units in your car have chip lock or programs specifically designed for your car?",
+    detailedDescription: "Today's vehicles are essentially computers on wheels. From engine management to infotainment systems, software faults and outdated programming can trigger warning lights, reduce performance, or disable features entirely. Our software specialists use dealer-level diagnostic tools and programming equipment to update ECU software, clear chip locks, reprogram modules, and resolve coding errors. We support a wide range of vehicles and ensure every programming session restores your vehicle's optimal functionality while preserving your personal settings.",
+    services: [
+      "ECU Remapping & Programming",
+      "Infotainment System Updates",
+      "Chip Key Programming & Immobilizer Coding",
+      "Module Coding & Adaptation",
+      "Software Fault Diagnosis & Repair",
+      "Key Programming for Newer Models"
+    ],
+    faqs: [
+      { question: "What happens if I drive with outdated ECU software?", answer: "Outdated software can cause poor performance, increased emissions, or trigger persistent warning lights." },
+      { question: "Is programming safe for my vehicle?", answer: "Yes, when performed with proper equipment and procedures by qualified technicians, programming is safe and secure." },
+      { question: "How long does ECU programming take?", answer: "Depending on the module, it can take anywhere from 30 minutes to 2 hours, including testing and verification." }
+    ],
     link: "/services/car-software-repair-programming"
   },
   {
+    id: "comfort-system-repair",
     title: "Comfort System Repair",
     image: "https://swissauto.ae/wp-content/uploads/2023/01/Comfort-System-Service_content.jpg",
-    description: "South africa is well known for its comfortable rides and highly equipped cars that ensures comfort to the drivers.",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2023/01/Comfort-System-Service_content.jpg",
+    shortDescription: "South africa is well known for its comfortable rides and highly equipped cars that ensures comfort to the drivers.",
+    detailedDescription: "Your vehicle's comfort systems – from automatic climate control and seat adjustment to power windows, locks, and interior lighting – contribute greatly to a pleasant driving experience. When these systems malfunction, everyday driving becomes frustrating. Our electronics specialists diagnose and repair climate control modules, power accessories, interior lighting systems, and convenience features. Using advanced diagnostic scanners, we quickly identify faults and restore full comfort functionality so you can enjoy every drive.",
+    services: [
+      "Climate Control System Repair",
+      "Power Window & Lock Repair",
+      "Seat Adjustment & Heating System Repair",
+      "Interior Lighting & Ambient Light Repair",
+      "Central Locking System Diagnosis",
+      "Sunroof & Convertible Top Repair"
+    ],
+    faqs: [
+      { question: "Why would my power windows stop working?", answer: "Common causes include a failed switch, blown fuse, or a faulty window regulator, all of which we can diagnose and fix." },
+      { question: "My AC cools but the fan speed won't change, what's wrong?", answer: "This usually points to a faulty blower motor resistor, which controls fan speeds in the climate system." },
+      { question: "Can a dead battery affect my comfort settings?", answer: "Yes, loss of battery power can erase saved seat and mirror positions, requiring reprogramming or system reset." }
+    ],
     link: "/services/comfort-system-repair"
   },
   {
+    id: "engine-control-unit-repair",
     title: "Engine Control Unit Repair",
     image: "https://swissauto.ae/wp-content/uploads/2023/01/Engine-control-Unit-2.jpg",
-    description: "Do you know, your car’s control unit ensures your safety and comfort?",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2023/01/Engine-control-Unit-2.jpg",
+    shortDescription: "Do you know, your car's control unit ensures your safety and comfort?",
+    detailedDescription: "The Engine Control Unit (ECU) is the brain of your vehicle, managing fuel injection, ignition timing, emissions, and overall engine performance. A faulty ECU can cause anything from minor drivability issues to a no-start condition. Our specialists perform detailed ECU diagnostics, reflow solder joints, replace faulty components, and reprogram units to factory specifications. We also offer ECU testing services to verify functionality. Whether your ECU needs a software update or a complete rebuild, we have the tools and expertise to get your engine running optimally again.",
+    services: [
+      "ECU Diagnostics & Fault Code Reading",
+      "ECU Reflow & Component-Level Repair",
+      "ECU Programming & Remapping",
+      "ECU Testing & Verification",
+      "Wiring Harness Inspection & Repair"
+    ],
+    faqs: [
+      { question: "What are the signs of a failing ECU?", answer: "Symptoms include the engine cranking but not starting, loss of power, rough idling, or the check engine light staying on." },
+      { question: "Can a damaged ECU be repaired?", answer: "In many cases yes. We use specialized equipment to diagnose and repair circuit-level faults in most ECU units." },
+      { question: "How long does ECU repair take?", answer: "Depending on the issue, repairs can take 1-3 days. We always provide a timeline estimate before starting work." }
+    ],
     link: "/services/engine-control-unit-repair"
   },
   {
+    id: "engine-cooling-system-repair",
     title: "Engine Cooling System Repair",
     image: "https://swissauto.ae/wp-content/uploads/2023/01/Engine-Coolent-System-content.jpg",
-    description: "Did you know that engine overheating is one of the most common problems on the roads of Dubai?",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2023/01/Engine-Coolent-System-content.jpg",
+    shortDescription: "Did you know that engine overheating is one of the most common problems on the roads of Dubai?",
+    detailedDescription: "An efficient cooling system is vital to prevent engine overheating and premature wear. Our cooling system specialists inspect radiators, water pumps, thermostats, hoses, and coolant reservoirs to identify leaks, blockages, or worn components. We perform flushes, pressure tests, and coolant replacements using manufacturer-recommended fluids. From minor hose repairs to complete radiator replacements, we ensure your engine stays at optimal operating temperature for performance and longevity.",
+    services: [
+      "Radiator Inspection & Replacement",
+      "Water Pump Repair & Replacement",
+      "Thermostat Repair & Replacement",
+      "Cooling System Flush & Refill",
+      "Hose & Clamp Inspection & Repair",
+      "Coolant Leak Detection & Repair",
+      "Cooling Fan & Fan Clutch Repair"
+    ],
+    faqs: [
+      { question: "What causes my engine to overheat?", answer: "Common causes include low coolant, a stuck thermostat, a failing water pump, or a clogged radiator." },
+      { question: "How often should I flush my cooling system?", answer: "Generally every 30,000 miles or 2 years, but severe driving conditions may require more frequent changes." },
+      { question: "Is it safe to drive with the temperature gauge in the red?", answer: "No. Continued driving under overheating conditions can cause severe engine damage including warped heads or a blown head gasket." }
+    ],
     link: "/services/engine-cooling-system-repair"
   },
   {
+    id: "engine-management-system-repair",
     title: "Engine Management System Repair",
     image: "https://swissauto.ae/wp-content/uploads/2023/01/Engine-Management-sytem_content.jpg",
-    description: "Do you know that the engine management system is the most vital part of your car?",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2023/01/Engine-Management-sytem_content.jpg",
+    shortDescription: "Do you know that the engine management system is the most vital part of your car?",
+    detailedDescription: "The engine management system integrates the ECU with sensors, actuators, and wiring to deliver optimal performance, fuel economy, and emissions. When sensors fail or connections degrade, your car may run poorly, consume more fuel, or emit excessive pollutants. Our advanced diagnostic service uses professional-grade scanners to read error codes, analyze live data, and identify the root cause of performance issues. We handle everything from sensor replacement to comprehensive system recalibration, ensuring your engine runs smoothly and efficiently.",
+    services: [
+      "Engine Management System Diagnostics",
+      "Sensor Replacement (Oxygen, MAF, MAP, Knock, etc.)",
+      "Actuator Testing & Replacement",
+      "Emissions System Repair",
+      "Performance Tuning & Calibration",
+      "Ignition System Diagnosis & Repair"
+    ],
+    faqs: [
+      { question: "What's the difference between the ECU and the engine management system?", answer: "The ECU is the control module; the engine management system is the complete network of sensors, actuators, and software that work together." },
+      { question: "Why does my check engine light come on intermittently?", answer: "Intermittent faults can be caused by loose connections, failing sensors, or vapor leaks that appear only under certain conditions." },
+      { question: "Can a faulty MAF sensor cause poor fuel economy?", answer: "Yes, a dirty or failing MAF sensor can send incorrect air intake readings, leading to improper fuel mixture and reduced MPG." }
+    ],
     link: "/services/engine-management-system-repair"
   },
   {
+    id: "gearbox-repair",
     title: "Gearbox repair",
     image: "https://swissauto.ae/wp-content/uploads/2023/01/Gear-Box-Content.jpg",
-    description: "Do you know that the gearbox is the second most essential part of the car?",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2023/01/Gear-Box-Content.jpg",
+    shortDescription: "Do you know that the gearbox is the second most essential part of the car?",
+    detailedDescription: "Your gearbox is responsible for transferring engine power to the wheels at the right speed and torque. Whether you drive a manual or automatic, any issue with your transmission can severely impact drivability. Our transmission specialists diagnose and repair gearboxes using state-of-the-art equipment. Services range from fluid changes and filter replacements to complete rebuilds and valve body repairs. For manual transmissions, we also handle clutch-related work. We guarantee quality workmanship and use only premium transmission fluids and components to extend the life of your gearbox.",
+    services: [
+      "Transmission Fluid Change & Flush",
+      "Filter Replacement",
+      "Valve Body Repair",
+      "Torque Converter Replacement",
+      "Manual Transmission Rebuild",
+      "Automatic Transmission Rebuild",
+      "Gearbox Diagnostics"
+    ],
+    faqs: [
+      { question: "What color should transmission fluid be?", answer: "Healthy fluid is typically red or pink. Dark brown or black fluid indicates it needs to be changed." },
+      { question: "What causes my transmission to slip?", answer: "Common causes include low fluid, worn clutches, or a failing torque converter." },
+      { question: "How much does a gearbox repair cost?", answer: "Costs vary widely depending on the issue. We offer transparent pricing and always provide a quote before any work begins." }
+    ],
     link: "/services/gearbox-repair"
   },
- 
   {
+    id: "suspension-repair",
     title: "Suspension Repair",
     image: "https://swissauto.ae/wp-content/uploads/2023/01/Suspension-repair-content.jpg",
-    description: "Do you know your car is completely useless if you are not able to control it? And from where the control comes?",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2023/01/Suspension-repair-content.jpg",
+    shortDescription: "Do you know your car is completely useless if you are not able to control it? And from where the control comes?",
+    detailedDescription: "Your suspension system ensures ride comfort, handling stability, and tire contact with the road. Worn shocks, struts, ball joints, or control arms can compromise safety and cause uneven tire wear. Our suspension specialists inspect and replace all components to restore your vehicle's original ride quality and control. We also perform four-wheel alignments using state-of-the-art equipment to ensure optimal tire life and handling performance. From routine shock replacements to complex air suspension repairs, we keep your vehicle stable and comfortable.",
+    services: [
+      "Shock & Strut Replacement",
+      "Ball Joint & Control Arm Repair",
+      "Coil Spring & Air Spring Repair",
+      "Suspension Bushings Replacement",
+      "Four-Wheel Alignment",
+      "Air Suspension System Repair",
+      "Steering Tie Rod & Linkage Repair"
+    ],
+    faqs: [
+      { question: "How do I know if I need new shocks?", answer: "Signs include excessive bouncing, uneven tire wear, or the front of the car diving when braking." },
+      { question: "What's the difference between shocks and struts?", answer: "Struts are a structural part of the suspension, while shocks are separate components that dampen movement." },
+      { question: "Do I need an alignment after struts are replaced?", answer: "Yes, replacing front struts affects alignment angles, so we strongly recommend a follow-up alignment." }
+    ],
     link: "/services/suspension-repair"
   },
   {
+    id: "touchless-wheel-alignment",
     title: "Touchless wheel alignment",
     image: "https://swissauto.ae/wp-content/uploads/2023/01/Touchless-wheel-alighnment-Content.jpg",
-    description: "Have you ever thought of a touchless wheel alignment system that can quickly measure your car wheel’s alignment",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2023/01/Touchless-wheel-alighnment-Content.jpg",
+    shortDescription: "Have you ever thought of a touchless wheel alignment system that can quickly measure your car wheel's alignment?",
+    detailedDescription: "Proper wheel alignment is critical for tire longevity, handling, and fuel efficiency. Our advanced touchless alignment system uses laser technology to measure all four wheels without making contact with the rim, preventing any damage. This precision allows us to adjust your vehicle's alignment angles to match the manufacturer's exact specifications. Misalignment causes uneven tire wear, pulling, and poor handling – we eliminate these issues quickly and accurately, giving you confidence on every drive.",
+    services: [
+      "Precision 4-Wheel Alignment",
+      "Thrust Angle Correction",
+      "Camber & Caster Adjustment",
+      "Toe Angle Correction",
+      "Alignment After Suspension Repair",
+      "Tire Wear Analysis"
+    ],
+    faqs: [
+      { question: "How often should I get an alignment?", answer: "We recommend alignment every 10,000 miles or when you notice uneven tire wear or the car pulling to one side." },
+      { question: "Is touchless alignment better?", answer: "Yes, the touchless system is faster, more accurate, and protects your wheels from clamp damage." },
+      { question: "Will alignment fix my steering wheel being off-center?", answer: "Yes, a proper alignment corrects the steering wheel position along with tracking and pull issues." }
+    ],
     link: "/services/touchless-wheel-alignment"
   },
   {
+    id: "transmission-repair",
     title: "Transmission Repair",
     image: "https://swissauto.ae/wp-content/uploads/2023/01/Transmission-Repair-Content.jpg",
-    description: "Do you know the transmission is one of the most neglected parts of the car?",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2023/01/Transmission-Repair-Content.jpg",
+    shortDescription: "Do you know the transmission is one of the most neglected parts of the car?",
+    detailedDescription: "The transmission is one of the most complex and expensive components in your vehicle, transferring engine power to the wheels. Manual and automatic transmissions require specialized knowledge and equipment to repair properly. Our transmission specialists diagnose shifting problems, fluid leaks, and internal component failures. We use advanced pressure testing and diagnostic scanners to find the root cause. From fluid changes to full rebuilds, we provide reliable, long-lasting solutions backed by a warranty to keep your vehicle moving smoothly.",
+    services: [
+      "Transmission Fluid & Filter Change",
+      "Transmission Rebuild & Repair",
+      "Torque Converter Replacement",
+      " solenoids Replacement",
+      "Pan Replacement & Leak Repair",
+      "Electronic Transmission Diagnostics"
+    ],
+    faqs: [
+      { question: "Why is my automatic transmission shifting hard?", answer: "This can indicate low or old fluid, a failing solenoid, or internal wear. A diagnostic scan helps identify the exact cause." },
+      { question: "How much does transmission repair cost?", answer: "Repair costs vary widely from a few hundred for fluid service to thousands for a rebuild. We offer flexible financing options." },
+      { question: "What color is healthy transmission fluid?", answer: "It should be red and translucent. Dark, burnt-smelling fluid indicates it needs replacement." }
+    ],
     link: "/services/transmission-repair"
   },
   {
+    id: "fleet-maintenance",
     title: "Fleet Maintenance",
     image: "https://swissauto.ae/wp-content/uploads/2023/01/Fleet-maintenace-Content.jpg",
-    description: "Do you know the transmission is one of the most neglected parts of the car?",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2023/01/Fleet-maintenace-Content.jpg",
+    shortDescription: "Do you know the transmission is one of the most neglected parts of the car?",
+    detailedDescription: "Managing a fleet requires reliable vehicles and minimal downtime. Our comprehensive fleet maintenance program takes the stress out of vehicle management. We offer scheduled services, emergency roadside assistance, detailed maintenance records, and bulk service discounts. Our certified technicians handle all makes and models, from light-duty vans to heavy trucks. With our dedicated fleet account managers, you can track service history, schedule appointments, and receive transparent quotes – all designed to maximize your fleet's uptime and reduce total cost of ownership.",
+    services: [
+      "Scheduled Preventive Maintenance",
+      "Emergency Roadside Assistance",
+      "Bulk Service & Tire Programs",
+      "Fleet Account Management",
+      "Detailed Maintenance Record Services",
+      "Vehicle Inspection Reports"
+    ],
+    faqs: [
+      { question: "What's included in fleet maintenance?", answer: "Our program covers oil changes, inspections, tire services, brake maintenance, and 24/7 emergency support." },
+      { question: "Do you offer pickup and delivery for fleet vehicles?", answer: "Yes, we provide mobile fleet service and pickup/delivery options to minimize your downtime." },
+      { question: "How do you help reduce fleet costs?", answer: "Through preventive maintenance, bulk pricing, and transparent reporting, we help you avoid costly breakdowns and emergency repairs." }
+    ],
     link: "/services/fleet-maintenance"
   },
   {
+    id: "major-service",
     title: "Major Service",
     image: "https://swissauto.ae/wp-content/uploads/2022/12/Major-service-Content-Image.jpg",
-    description: "Major services is a full professional car service as per the manufacturer guidelines with the complete vehicle inspection with any needed repairs & replacements.",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2022/12/Major-service-Content-Image.jpg",
+    shortDescription: "Major services is a full professional car service as per the manufacturer guidelines with the complete vehicle inspection with any needed repairs & replacements.",
+    detailedDescription: "A major service is the most comprehensive maintenance routine for your vehicle, following manufacturer guidelines to the letter. This intensive service includes all elements of a minor service plus critical inspections and replacements such as spark plugs, air filters, cabin filters, and fluid top-ups or changes. Our certified technicians perform a complete vehicle inspection, checking brakes, steering, suspension, and exhaust systems. Any issues identified are reported with transparent pricing before any additional work begins. A major service keeps your warranty valid and your vehicle in peak condition.",
+    services: [
+      "Engine Oil & Filter Change",
+      "Spark Plug Inspection & Replacement",
+      "Air Filter & Cabin Filter Replacement",
+      "Brake Inspection & Fluid Top-Up",
+      "Steering & Suspension Check",
+      "Exhaust System Inspection",
+      "Cooling System Inspection",
+      "Full Diagnostic Scan"
+    ],
+    faqs: [
+      { question: "When should my car have a major service?", answer: "Typically every 30,000 to 60,000 km or every 2 years, depending on your vehicle and driving conditions." },
+      { question: "Is a major service worth the cost?", answer: "Absolutely. A thorough major service prevents costly repairs, maintains fuel efficiency, and extends your vehicle's lifespan." },
+      { question: "Will you notify me of additional repairs?", answer: "Yes, we always provide a detailed report and a price quote before performing any extra work." }
+    ],
     link: "/services/major-service"
   },
   {
+    id: "minor-service",
     title: "Minor Service",
     image: "https://swissauto.ae/wp-content/uploads/2022/12/Minor-Service-Content-Image.jpg",
-    description: "Minor car services do not cost much but have a greater impact on your vehicle’s overall health and keep away major repairs.",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2022/12/Minor-Service-Content-Image.jpg",
+    shortDescription: "Minor car services do not cost much but have a greater impact on your vehicle's overall health and keep away major repairs.",
+    detailedDescription: "Regular minor services are the key to keeping your vehicle healthy and preventing major issues down the road. This essential service includes an oil and filter change, fluid level checks, tire inspection, and a basic diagnostic scan. Our certified technicians check the engine, brakes, lights, and other critical systems to ensure everything is functioning properly. Keeping up with minor service intervals protects your investment, maintains optimal performance, and helps prevent costly breakdowns. It's the most cost-effective way to keep your car running like new.",
+    services: [
+      "Engine Oil & Filter Change",
+      "Fluid Level Checks & Top-Ups",
+      "Tire Inspection & Pressure Check",
+      "Battery & Electrical Check",
+      "Brake System Inspection",
+      "Basic Diagnostic Scan",
+      "Light & Indicator Check"
+    ],
+    faqs: [
+      { question: "How often should I get a minor service?", answer: "Every 5,000 to 10,000 km or every 6 months, depending on your vehicle and driving habits." },
+      { question: "Is an oil change part of a minor service?", answer: "Yes, oil and filter replacement are the core components of a minor service." },
+      { question: "Can I do minor service myself?", answer: "While basic checks are possible, we recommend professional service to ensure thoroughness and catch hidden issues early." }
+    ],
     link: "/services/minor-service"
   },
-  
   {
+    id: "brake-caliper-painting",
     title: "Brake Caliper Painting",
     image: "https://swissauto.ae/wp-content/uploads/2022/12/Brake-Caliber-Content-Image.jpg",
-    description: "Brake caliper painting makes your car look smart, fresh and prevents the calipers from rusting.",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2022/12/Brake-Caliber-Content-Image.jpg",
+    shortDescription: "Brake caliper painting makes your car look smart, fresh and prevents the calipers from rusting.",
+    detailedDescription: "Over time, brake calipers can become rusty and unsightly. Our professional brake caliper painting service restores their appearance and protects them from future rust and corrosion. We remove the calipers, thoroughly clean and prepare the surfaces, and apply a durable ceramic-based paint in a color of your choice. This not only enhances your car's aesthetic appeal but also extends the lifespan of your brake components. Available in a wide range of colors to match or contrast your vehicle, our caliper painting gives your car a custom, high-performance look.",
+    services: [
+      "Caliper Removal & Cleaning",
+      "Surface Preparation & Priming",
+      "Ceramic-Based Paint Application",
+      "Multiple Color Options",
+      "Reassembly & Inspection"
+    ],
+    faqs: [
+      { question: "How long does caliper painting take?", answer: "The process typically takes 2-3 days to allow for proper drying and curing time." },
+      { question: "Will painting affect brake performance?", answer: "No, when done professionally, painting is purely cosmetic and does not affect braking performance." },
+      { question: "Do you offer color matching?", answer: "Yes, we offer a wide range of standard colors and can match custom requests for an additional fee." }
+    ],
     link: "/services/brake-caliper-painting"
   },
   {
+    id: "ceramic-coating",
     title: "Ceramic Coating",
     image: "https://swissauto.ae/wp-content/uploads/2022/12/ceramic-Content-Image.jpg",
-    description: "Ceramic coating ensures extreme protection to your car surface for scratches, dirt and chemical substances.",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2022/12/ceramic-Content-Image.jpg",
+    shortDescription: "Ceramic coating ensures extreme protection to your car surface for scratches, dirt and chemical substances.",
+    detailedDescription: "Ceramic coating applies a protective nanotechnology layer over your vehicle's paintwork that is far more durable than traditional wax. This liquid polymer creates a invisible barrier that repels water, protects against UV rays, scratches, bugs, and chemical stains. Unlike wax, which washes off in a few months, our high-quality ceramic coating can last for years. The result is a showroom shine that lasts, easier cleaning, and long-term protection for your vehicle's paintwork, making it an excellent investment for any car owner.",
+    services: [
+      "Paint Correction & Detailing",
+      "Nanotechnology Coating Application",
+      "Gloss & Matte Finish Options",
+      "Full Vehicle Protection",
+      "Maintenance Coating Kits"
+    ],
+    faqs: [
+      { question: "How long does ceramic coating last?", answer: "High-quality coating can last 2-5 years depending on the product tier and maintenance." },
+      { question: "Does ceramic coating prevent scratches?", answer: "It provides strong protection against swirl marks, light scratches, and chemical etching." },
+      { question: "Is ceramic coating worth the cost?", answer: "Given its longevity and protective benefits, ceramic coating pays for itself by reducing the need for frequent detailing and repairs." }
+    ],
     link: "/services/ceramic-coating"
   },
   {
+    id: "car-dip-color-service",
     title: "Car dip color service",
     image: "https://swissauto.ae/wp-content/uploads/2022/12/CAR-DIP-COLOR-SERVICE-Content-Image.jpg",
-    description: "Quality dip color paint services when done with greater care provides a unique finish to your vehicle.",
+    bannerImage: "https://swissauto.ae/wp-content/uploads/2022/12/CAR-DIP-COLOR-SERVICE-Content-Image.jpg",
+    shortDescription: "Quality dip color paint services when done with greater care provides a unique finish to your vehicle.",
+    detailedDescription: "Car dip is a temporary or semi-permanent paint job applied using specialized vinyl-like coating. Unlike traditional paint, car dip can be easily removed without damaging your original paintwork, making it perfect for seasonal changes or custom looks. Our skilled technicians apply premium plasti-dip products in a pristine, dust-free environment. We offer a wide selection of colors, finishes including matte, gloss, and metallic options. Whether you want to test a new color before committing to a full paint job or give your vehicle a unique personal touch, our car dip service delivers professional results.",
+    services: [
+      "Custom Color Selection",
+      "Matte, Gloss & Metallic Finishes",
+      "Full Vehicle Dip Application",
+      "Partial Dip Accents",
+      "Professional Removal Service"
+    ],
+    faqs: [
+      { question: "How long does car dip last?", answer: "Properly applied dip can last 2-5 years, depending on exposure and maintenance." },
+      { question: "Can car dip be removed?", answer: "Yes, it peels off easily and can be removed without harming the original paint underneath." },
+      { question: "Is car dip cheaper than painting?", answer: "It's considerably more affordable than a full paint job and removable, offering flexibility." }
+    ],
     link: "/services/car-dip-color-service"
+  },
+  {
+    id: "roadworthy-booking",
+    title: "Roadworthy Booking",
+    image: "https://swissauto.ae/wp-content/uploads/2023/01/Brake-repair_content.jpg",
+    bannerImage: "https://www.njcleanair.com/images/car-inspection.jpg",
+    shortDescription: "Book your vehicle's roadworthy inspection online with certified technicians who verify that your vehicle meets all safety standards before you hit the road.",
+    detailedDescription: "A roadworthy certificate confirms that your vehicle is roadworthy and safe to drive. At Cartenatex, we make booking your roadworthy inspection hassle-free. Our certified inspectors perform comprehensive checks covering brakes, suspension, tires, lights, steering, and all safety-critical components. We use professional-grade equipment and follow national standards for vehicle condition. Once your vehicle passes inspection, we issue a legitimate roadworthy certificate. Booking online saves you time, and we provide transparent pricing with no hidden costs. Schedule your appointment and drive with confidence.",
+    services: [
+      "Online Roadworthy Booking",
+      "Comprehensive Safety Inspection",
+      "Brake System Check",
+      "Suspension & Steering Inspection",
+      "Tire & Wheel Inspection",
+      "Lighting & Electrical Systems Check"
+    ],
+    faqs: [
+      { question: "How long does a roadworthy inspection take?", answer: "Most inspections are completed within 30-60 minutes once your vehicle is in the bay." },
+      { question: "Do I need to book an appointment?", answer: "Yes, we recommend booking in advance to minimize wait times and guarantee availability." },
+      { question: "What happens if my vehicle fails?", answer: "We'll provide a detailed report of any issues. You can opt to fix them with us and we'll re-inspect at no extra booking fee." }
+    ],
+    link: "/services/roadworthy-booking",
+    category: "natis",
+    icon: "CalendarCheck"
+  },
+  {
+    id: "roadworthy-testing",
+    title: "Roadworthy Testing",
+    image: "https://swissauto.ae/wp-content/uploads/2023/01/Brake-repair_content.jpg",
+    bannerImage: "https://www.njcleanair.com/images/car-inspection.jpg",
+    shortDescription: "Professional roadworthy testing services that assess your vehicle's mechanical and safety condition against national roadworthiness standards.",
+    detailedDescription: "Our roadworthy testing service is conducted by trained, certified inspectors using the latest diagnostic tools and checklists aligned with national roadworthiness requirements. We thoroughly examine every safety-critical system including the braking system, steering and suspension components, tires and wheels, lights, indicators, seatbelts, and structural integrity. Each test produces a detailed report identifying any defects or areas requiring attention. Whether you need testing before selling, transferring ownership, or periodic compliance checks, our service ensures your vehicle is safe and legally roadworthy.",
+    services: [
+      "Full Roadworthy Vehicle Test",
+      "Brake & Suspension Assessment",
+      "Tire Condition & Tread Depth Check",
+      "Lighting & Electrical Systems Test",
+      "Steering & Alignment Check",
+      "Detailed Test Report & Certificate"
+    ],
+    faqs: [
+      { question: "What vehicles require a roadworthy test?", answer: "Generally, vehicles being sold, transferred, or re-registered, and those displaying a defect warning light." },
+      { question: "How often do I need a roadworthy test?", answer: "In many regions, vehicles over a certain age require annual or bi-annual roadworthy testing." },
+      { question: "Will I get the certificate on the same day?", answer: "Yes, upon successful completion you receive your roadworthy certificate immediately." }
+    ],
+    link: "/services/roadworthy-testing",
+    category: "natis",
+    icon: "ClipboardCheck"
+  },
+  {
+    id: "roadworthy-issuing",
+    title: "Roadworthy Issuing",
+    image: "https://swissauto.ae/wp-content/uploads/2023/01/Brake-repair_content.jpg",
+    bannerImage: "https://www.njcleanair.com/images/car-inspection.jpg",
+    shortDescription: "Obtain your official roadworthy certificate through our licensed and authorized service center, accepted by all licensing authorities.",
+    detailedDescription: "Once your vehicle passes the roadworthy test, we issue an official, legally recognized roadworthy certificate that is accepted by national and provincial licensing authorities. Our certified inspectors are authorized to issue valid certificates for registration, transfer, and compliance purposes. The certificate is processed digitally with instant issuance where applicable, and we also provide hard-copy versions upon request. We maintain records of all certificates issued and can provide renewal reminders so you never miss a compliance deadline.",
+    services: [
+      "Official Roadworthy Certificate Issuing",
+      "Digital & Physical Certificate Options",
+      "License Authority Accepted Certificates",
+      "Certificate Renewal Reminders",
+      "Transfer & Registration Support"
+    ],
+    faqs: [
+      { question: "Is your roadworthy certificate legally accepted?", answer: "Yes, our certificates are issued by certified inspectors and accepted by all licensing authorities." },
+      { question: "How long is a roadworthy certificate valid?", answer: "Validity periods vary by region, typically ranging from 30 to 90 days from the date of issue." },
+      { question: "Can I get a duplicate certificate?", answer: "Yes, we can reprint or re-issue lost certificates for a small processing fee." }
+    ],
+    link: "/services/roadworthy-issuing",
+    category: "natis",
+    icon: "Award"
+  },
+  {
+    id: "police-clearance",
+    title: "Police Clearance",
+    image: "https://swissauto.ae/wp-content/uploads/2023/01/Brake-repair_content.jpg",
+    bannerImage: "https://www.njcleanair.com/images/car-inspection.jpg",
+    shortDescription: "Convenient police clearance and vehicle theft checks to verify that your car has no outstanding legal issues before sale or registration.",
+    detailedDescription: "A police clearance verifies that a vehicle has no reported theft, no outstanding law enforcement holds, and no major violation records. This is an essential document when selling, buying, or registering a vehicle. Our service works with local authorities to process your police clearance efficiently. We verify vehicle identity, check national databases, and confirm no pending legal encumbrances exist. Once verified, we provide you with the official police clearance documentation required for transfers and registration. Our streamlined process minimizes delays and gives you the paperwork you need quickly.",
+    services: [
+      "Police Clearance Certificate Processing",
+      "Vehicle Theft Status Verification",
+      "Law Enforcement Database Check",
+      "Identity & Ownership Verification",
+      "Expedited Certificate Issuance",
+      "Transfer Documentation Support"
+    ],
+    faqs: [
+      { question: "How long does a police clearance take?", answer: "Typically 1-3 business days, depending on authority processing times." },
+      { question: "Is a police clearance required to sell a vehicle?", answer: "Yes, most transfers require a valid police clearance to confirm a clean ownership history." },
+      { question: "What documents do I need?", answer: "A valid ID, ownership documents, and proof of residence are typically required." }
+    ],
+    link: "/services/police-clearance",
+    category: "natis",
+    icon: "BadgeCheck"
+  },
+  {
+    id: "vehicle-licensing",
+    title: "Vehicle Licensing",
+    image: "https://swissauto.ae/wp-content/uploads/2023/01/Brake-repair_content.jpg",
+    bannerImage: "https://www.njcleanair.com/images/car-inspection.jpg",
+    shortDescription: "Complete vehicle licensing and renewal services, ensuring your car remains legally registered and compliant with national transit authorities.",
+    detailedDescription: "Vehicle licensing must be renewed annually or as required by law. Our licensing desk handles all registration and renewal paperwork on your behalf, including new registrations, annual renewals, duplicate licenses, and cross-border compliance. We verify that your vehicle has valid insurance and roadworthiness certification where required, fill out all forms accurately, and submit them to the licensing authority. We keep you updated on renewal deadlines and can process payments for applicable fees. With our service, you avoid long queues and ensure your vehicle remains fully compliant and road-legal.",
+    services: [
+      "New Vehicle Registration",
+      "Annual License Renewal",
+      "Duplicate License Issuance",
+      "Cross-Border Licensing Compliance",
+      "Registration Transfer Assistance",
+      "Tax & Fee Processing"
+    ],
+    faqs: [
+      { question: "How often do I need to renew my license?", answer: "Renewal periods vary by region, commonly annually or every 2-3 years." },
+      { question: "Can you renew a license if it has expired?", answer: "Yes, often with a small late fee. We handle expired renewals as well." },
+      { question: "What if I just bought a new vehicle?", answer: "We can process a new registration for you and handle all necessary documentation." }
+    ],
+    link: "/services/vehicle-licensing",
+    category: "natis",
+    icon: "FileText"
+  },
+  {
+    id: "vehicle-change-of-ownership",
+    title: "Vehicle Change of Ownership",
+    image: "https://swissauto.ae/wp-content/uploads/2023/01/Brake-repair_content.jpg",
+    bannerImage: "https://www.njcleanair.com/images/car-inspection.jpg",
+    shortDescription: "Streamlined change of ownership transfer services for buying or selling a vehicle, including all paperwork, verification, and licensing authority submission.",
+    detailedDescription: "Changing ownership when selling or buying a vehicle involves multiple forms, signatures, ID verification, and licensing authority submission. Our change of ownership service manages the entire process end-to-end. We verify seller and buyer identities, prepare and witness all required transfer forms, confirm a valid roadworthy certificate and insurance, process the transfer at the licensing authority, and issue the new registration documents. We also handle any applicable transfer taxes and fees. Whether you're selling or buying, our service ensures a smooth, legally compliant transfer without hassle.",
+    services: [
+      "Complete Ownership Transfer",
+      "Seller & Buyer Identity Verification",
+      "Transfer Form Preparation & Witnessing",
+      "Licensing Authority Submission",
+      "New Registration Document Issuance",
+      "Tax & Fee Processing"
+    ],
+    faqs: [
+      { question: "How long does a change of ownership take?", answer: "Usually processed within the same day or 1-2 business days depending on authority workload." },
+      { question: "Do I need a roadworthy certificate to transfer ownership?", answer: "Yes, a valid roadworthy certificate is typically required for ownership transfers." },
+      { question: "What documents do I need to bring?", answer: "Both parties' IDs, proof of residence, current registration, insurance proof, and the vehicle." }
+    ],
+    link: "/services/vehicle-change-of-ownership",
+    category: "natis",
+    icon: "ArrowLeftRight"
   }
 ];
 
