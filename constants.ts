@@ -563,46 +563,146 @@ export const PRODUCTS: Product[] = [
     detailLink: 'https://www.scantooldepot.com/component/eshop/xtool/d9hd?Itemid=0'
   },
   {
-    id: 'xtool-12',
-    name: 'HD Guru',
-    category: 'Heavy Duty',
-    price: 6680,
-    image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/HD%20GURU%20Main-350x350.png',
-    description: 'HDGURU is XTOOLs first entry-level heavy-duty vehicle diagnostic tool, featuring a streamlined Linux system and a 5.45-inch display, ideal for small fleet mechanics. It supports comprehensive Cummins ECU and HD OBD2 generic diagnostics, offering code scanning and clearing, live data monitoring, and detailed ECU information. With over 60 bi-directional tests, 35+ Cummins Dedicated functions, and advanced feature and parameter programming across 45+ applications, HDGURU delivers professional-grade diagnostics in a compact, easy-to-use device.',
+    id: 'xtool-16',
+    name: 'E2S',
+    category: 'EV Diagnostic',
+    price: 0,
+    image: 'https://www.xtooltech.com/uploads/images/ev-diagnostic-tools-e2-s-bulk.webp',
+    description: 'The XTOOL E2S is a professional, all-in-one diagnostic platform specifically engineered to meet the needs of modern electric vehicle (EV), hybrid, and traditional internal combustion engine workshops. It provides deep diagnostics for EVs, including battery pack health (SOC/SOH), cell voltage and temperature monitoring, and fault detection across over 4,000 vehicle models.',
     features: [
-      'Fleet Specialist: First entry-level heavy-duty diagnostic device from XTOOL, perfect for small fleet mechanics and mobile technicians',
-      'Cummins Mastery: Built-in 35+ dedicated Cummins special functions and support for a wide range of Cummins ECUs',
-      'Precision Control: Offers 60+ bi-directional tests for component control and 45+ feature/parameter modification functions',
-      'Heavy-Duty Generic: Includes HD OBD-II generic diagnostics with MIL status checks and PID reading',
-      'Compact & Rugged: 5.45-inch display with a user-friendly Linux system designed for professional portability',
-      'Real-time Analysis: Displays real-time live data and freeze frame analysis for efficient troubleshooting',
-      'Modern Hardware: Equipped with brand-new hardware and a streamlined user interface for high-speed stability'
+      'Specialized EV Diagnostics: Beyond standard OBD2 functions, provides deep diagnostics for EVs including battery pack health.',
+      'Component Testing: Supports off-vehicle testing for critical high-voltage components such as DC-DC converters, On-Board Chargers (OBC), and compressors.',
+      'Advanced Maintenance: Includes 42+ special maintenance functions like BMS resets, injector coding, EPB, ABS bleeding.',
+      'Technical Support Resources: Features an extensive library of over 1,600 high-definition battery pack wiring diagrams.',
+      'Modern Connectivity: Supports advanced communication protocols including CAN FD and DoIP.'
     ],
     techSpecs: [
-      'Operating System：Linux',
-      'Communication Method：Wired',
-      'Processor：Dual core Cortex-A7@1.2GHz',
-      'Connectivity：Type-C',
-      'Storage：32G',
-      'Working Voltage：9-36V',
-      'Display：5.45-inch, 1440×1440px',
-      'Battery：3150mAh, 3.6V',
-      'Compatible Protocol：All common protocols',
-      'Working Temperature：0 to 40℃',
-      'Storage Temperature：-20 to 60℃'
+      'Operating System: Android 10.0',
+      'Display: 10.1-inch IPS Touchscreen (1920x1200 resolution)',
+      'Processor: 8-Core (up to 2.2 GHz)',
+      'Memory: 8GB RAM + 128GB Storage',
+      'Battery: 6400 mAh, 7.2V',
+      'Camera: 8.0 Megapixel',
+      'Connectivity: Dual-band Wi-Fi, USB Type-C',
+      'Dimensions: 311 x 190 x 41 mm'
     ],
-    packingList: [
-      'Color Carton',
-      'Packing List',
-      'Certificate of Quality',
-      'Quick Start Guide',
-      'Tablet',
-      'USB Type-C Main Cable',
-      'Cummins 6+9 Adapter',
-      'VGA to OBDII-16 Main Cable'
+    packingList: [],
+    reviewVideo: 'https://youtu.be/Z4qAbF6ngm8?si=AU3isRFiBGdHBxdX',
+    detailLink: ''
+  },
+  {
+    id: 'xtool-17',
+    name: 'E2 Pro',
+    category: 'EV Diagnostic',
+    price: 0,
+    image: 'https://www.xtooltech.com/uploads/images/ev-diagnostic-tools-e2-pro-bulk.webp',
+    description: 'The XTOOL E2 Pro is an advanced, professional-grade diagnostic platform specifically engineered for electric, hybrid, and range-extended vehicles (BEV, PHEV, REEV), while also maintaining support for traditional gasoline and diesel vehicles. Offers dedicated diagnostic coverage for new energy vehicles, including real-time monitoring of high-voltage systems.',
+    features: [
+      'EV & Hybrid Specialization: Dedicated diagnostic coverage for new energy vehicles.',
+      'Battery Management System (BMS) Support: Includes functions for battery pack analysis and BMS data recovery/repair.',
+      'OEM-Level Capabilities: Specialized support for premium brands like Tesla, Mercedes-Benz, and BMW.',
+      'Off-Vehicle Component Testing: Allows independent testing of critical components like DCDC converters, onboard chargers, compressors.',
+      'Gateway Simulation: Gateway simulation to maintain communication between modules during diagnostics.',
+      'Comprehensive Maintenance: Supports over 45–55+ maintenance functions.'
     ],
+    techSpecs: [
+      'Operating System: Android 10.0',
+      'Display: 10.1" IPS Touchscreen (1920×1200 resolution)',
+      'Processor: 4-Core 1.80 GHz / 8-core',
+      'Memory: 8GB RAM + 256GB Storage',
+      'Battery: 6480mAh / 7.2V',
+      'Camera: 8.0 Megapixel (Rear)',
+      'Connectivity: Dual Wi-Fi (2.4GHz/5.0GHz), USB Type-C',
+      'Protocols: CANFD, DoIP',
+      'Dimensions: 311 × 190 × 41 mm'
+    ],
+    packingList: [],
+    reviewVideo: 'https://youtu.be/uDknwOoKcvg?si=yAYJKxhznvLNoWSm',
+    detailLink: ''
+  },
+  {
+    id: 'xtool-18',
+    name: 'XT50 (2026)',
+    category: 'Gasoline Diagnostic',
+    price: 0,
+    image: 'https://www.xtooltech.com/uploads/images/gasoline-diagnostic-tools-xt50-bulk.webp',
+    description: 'The XTOOL XT50 is a compact, Linux-based smart diagnostic tool designed for individual car owners and small repair workshops. It is a portable, reliable, and high-performance device that supports comprehensive vehicle diagnostics, full-system diagnostics, and over 25+ maintenance functions.',
+    features: [
+      'Full-System Diagnostics: Complete system access, including reading ECU information, fault codes, live data.',
+      'Maintenance Functions: Equipped with 25+ common special functions including ABS Bleeding, Injector Coding, TPMS Reset.',
+      'Bi-Directional Control: Enables active tests to interact with vehicle components.',
+      'Vehicle Coverage: Supports over 85 brands and 10,000+ vehicle models.',
+      'Smart Features: Includes AutoScan, OBD Health Check, and support for CAN FD and FCA AutoAuth.'
+    ],
+    techSpecs: [
+      'Operating System: Linux',
+      'Display: 5.45-inch touch screen',
+      'Processor: Dual-core Cortex-A7 @ 1.2GHz',
+      'Storage: 64GB',
+      'Battery: 3150mAh, 3.6V',
+      'Connectivity: Wired (Type-C)',
+      'Operating Temperature: 0~40℃'
+    ],
+    packingList: [],
+    reviewVideo: 'https://youtu.be/rEoSIvwEWu0?si=y_q1jDkpw18YAant',
+    detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-xt50/'
+  },
+  {
+    id: 'xtool-19',
+    name: 'XPortal',
+    category: 'Diagnostic Tools',
+    price: 0,
+    image: 'https://www.xtooltech.com/uploads/images/j2534-xportal-bulk.webp',
+    description: 'The XTOOL XPortal is a professional-grade J2534 Pass-Thru VCI (Vehicle Communication Interface) device designed to bridge the gap between diagnostic tools and vehicle manufacturer (OEM) software for precise ECU programming and coding.',
+    features: [
+      'OEM Compatibility: Enables access to official diagnostic and programming software from over 10–15 major vehicle manufacturers.',
+      'Dual Connectivity: Supports both wired (USB Type-C) and wireless (2.4 GHz Wi-Fi) communication.',
+      'Wide Protocol Support: Fully compatible with modern and legacy vehicle communication protocols including DoIP, CAN-FD, Dual-CAN.',
+      'System Versatility: Compatible with both 12V (gasoline) and 24V (diesel) vehicle systems.',
+      'User-Friendly: Streamlined driver installation process and a portable form factor.'
+    ],
+    techSpecs: [
+      'Processor: NXP Processor',
+      'Communication: Wi-Fi (2.4 GHz) / Wired (USB Type-C)',
+      'Operating System: Windows 7 or later',
+      'Working Voltage: 9V – 36V',
+      'Display: 0.97-inch Monochrome Display',
+      'Wireless Range: Over 10 meters',
+      'Working Temp: 0°C to 40°C'
+    ],
+    packingList: [],
     reviewVideo: '',
-    detailLink: 'https://www.scantooldepot.com/component/eshop/xtool/hd-guru?Itemid=0'
+    detailLink: 'https://www.xtooltech.com/products/auto-diagnostic-tools-J2534-pass-thru-device-xportal/'
+  },
+  {
+    id: 'xtool-20',
+    name: 'BEC2415',
+    category: 'EV Diagnostic',
+    price: 0,
+    image: 'https://www.xtooltech.com/uploads/images/image_1780133616.webp',
+    description: 'The XTOOL BEC2415 is a professional-grade lithium battery charge-discharge balancer designed for the maintenance and repair of electric vehicle (EV) and hybrid battery modules.',
+    features: [
+      'High-Efficiency Balancing: Supports up to 20A for both charging and discharging.',
+      'Broad Compatibility: Compatible with various lithium battery chemistries, including NCM and LiFePO₄.',
+      'Precision Maintenance: Offers high-precision voltage sampling (±1mV) and internal resistance testing (0.5% accuracy).',
+      'Multi-Channel Operation: Features 24-channel simultaneous balancing.',
+      'Comprehensive Protection: Multiple safety features, including reverse polarity, overvoltage, overcurrent protection.',
+      'User-Friendly Interface: High-definition touchscreen LCD display.'
+    ],
+    techSpecs: [
+      'Input Voltage: AC 220V ±15%, 50Hz',
+      'Charging Current: 0.1 – 15A',
+      'Discharging Current: 0.1 – 20A',
+      'Balancing Voltage: 2V – 4.2V (adjustable)',
+      'Voltage Sampling Accuracy: ±0.10% FS (or ±1mV)',
+      'Device Weight: 13 kg',
+      'Device Size: 490.75 x 314 x 341.5 mm',
+      'Operating Temperature: -10°C to 40°C',
+      'Power Consumption: <100W'
+    ],
+    packingList: [],
+    reviewVideo: '',
+    detailLink: ''
   },
   {
     id: 'xtool-13',
