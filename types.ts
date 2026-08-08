@@ -61,6 +61,7 @@ export interface Product {
   category: string;
   price: number;
   image: string;
+  gallery?: string[];
   description: string;
   features: string[];
   packingList?: string[];

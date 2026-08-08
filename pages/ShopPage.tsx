@@ -5,22 +5,20 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { PRODUCTS } from '../constants';
 import { Filter, Truck, Search } from 'lucide-react';
 
-const categories = [
-  { id: 'all', label: 'All XTool Scanners' },
-  { id: 'EV Diagnostic', label: 'EV Diagnostics' },
-  { id: 'Advanced Diagnostic', label: 'Advanced Systems' },
-  { id: 'Flagship System', label: 'Flagship Systems' },
-  { id: 'Heavy Duty', label: 'Heavy Duty' },
-  { id: 'Smart Diagnostic', label: 'Smart Diagnostic' },
-  { id: 'Code Reader', label: 'Code Readers' },
-];
-
 import QuoteModal from '../components/QuoteModal';
 
 const ShopPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
+
+  const categories = useMemo(() => {
+    const uniqueCategories = Array.from(new Set(PRODUCTS.map((product) => product.category))).sort();
+    return [
+      { id: 'all', label: 'All XTOOL Products' },
+      ...uniqueCategories.map((category) => ({ id: category, label: category })),
+    ];
+  }, []);
 
   const filteredProducts = useMemo(() => {
     return PRODUCTS.filter(product => {

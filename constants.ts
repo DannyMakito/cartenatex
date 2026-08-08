@@ -13,7 +13,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'xtool-1',
     name: 'D9HD',
-    category: 'EV Diagnostic',
+    category: 'Diesel Diagnostic',
     price: 40063,
     image: 'https://en.xtooltech.com/uploads/images/diesel-diagnostic-tool-d9hd-bulk.webp',
     description: 'D9HD is the ultimate dual-use diagnostic tablet for both 12V cars and 24V heavy-duty trucks, ideal for workshops, service centers, and mobile technicians. Running Android 10, it boasts a 9.7″ HD touchscreen, a quad-core 1.8 GHz CPU, 2GB RAM, and 128GB storage, paired with a 10,000 mAh battery and 8MP rear camera. It delivers full-system diagnostics, online/offline ECU coding, topology mapping, bi-directional controls, key programming, and over 40+ special service functions. Enjoy 3 years of free software updates and extensive coverage spanning 10,000+ models—professional-grade, yet truly portable.',
@@ -58,7 +58,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'xtool-2',
     name: 'XT90',
-    category: 'Advanced Diagnostic',
+    category: 'Gasoline Diagnostic',
     price: 24198,
     image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/xt90-350x350.jpg',
     description: 'XT90 is an advanced automotive diagnostic system featuring a large 9.7-inch screen and dual WIFI modules for stable data transfer between the tablet and VCI. It provides full-system automotive diagnostics, live data, Bi-directional control tests, ECU coding and programming.',
@@ -104,13 +104,13 @@ export const PRODUCTS: Product[] = [
       'USB Data Cable (Connect to PC)',
       'HONDA-3', 'TOYOTA-17', 'BMW-20', 'KIA-20', 'MAZDA-17R', 'NISSAN-14', 'GM/DAEWOO-12', 'SUZUKI-3', 'FIAT-3', 'HYUNDAI/KIA-10', 'AUDI-4', 'MITSUBISHI-12+16', 'UNIVERSAL-3', 'CITROEN-2', 'BENZ-38', 'BENZ-14', 'OBD II-16', 'DB15 Main Cable'
     ],
-    reviewVideo: 'https://www.youtube.com/watch?v=sDbdvvBiTmo',
-    detailLink: 'https://www.scantooldepot.com/component/eshop/xtool/xt90?Itemid=0'
+    reviewVideo: 'https://www.xtooltech.com/videos/unboxing-showing-features-explained-of-automotive-diagnostic-tool-xt90-xtool.html',
+    detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-xt90/'
   },
   {
     id: 'xtool-3',
     name: 'XT80',
-    category: 'Smart Diagnostic',
+    category: 'Gasoline Diagnostic',
     price: 11690,
     image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/xt80-350x350.jpg',
     description: 'XT80 is an automotive smart diagnostic system with 8 inches LCD display, which is designed for mechanics, electricians, and car maintenance shops. It supports full OBDII function and automotive diagnostics for full-system.',
@@ -154,12 +154,12 @@ export const PRODUCTS: Product[] = [
       'DB15 Main Cable'
     ],
     reviewVideo: '',
-    detailLink: 'https://www.scantooldepot.com/component/eshop/xtool/xt80?Itemid=0'
+    detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-xt80/'
   },
   {
     id: 'xtool-4',
     name: 'XT80W',
-    category: 'Wireless Diagnostic',
+    category: 'Gasoline Diagnostic',
     price: 12525,
     image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/xt80w-350x350.jpg',
     description: 'XT80W is an automotive smart diagnostic system with 8 inches LCD display, featuring wireless VCI Connectivity in a Compact Scan Tool.',
@@ -202,13 +202,13 @@ export const PRODUCTS: Product[] = [
       'OBDII-16 Adapter',
       'DB15 Main Cable'
     ],
-    reviewVideo: '',
-    detailLink: 'https://www.scantooldepot.com/component/eshop/xtool/xt80w?Itemid=0'
+    reviewVideo: 'https://www.xtooltech.com/videos/car-diagnosis-xt80w-unboxing-video-with-functions-introduction.html',
+    detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-xt80w/'
   },
   {
     id: 'xtool-5',
     name: 'XT70W',
-    category: 'Wireless Diagnostic',
+    category: 'Gasoline Diagnostic',
     price: 9502,
     image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/xt70w-350x350.jpg',
     description: 'XT70W is an automotive smart diagnostic system with a 7-inch LCD display and Android 10 OS, designed for mechanics, electricians, and car maintenance shops.',
@@ -246,13 +246,13 @@ export const PRODUCTS: Product[] = [
       'Charger UK Adapter',
       'USB Cable'
     ],
-    reviewVideo: 'https://www.youtube.com/watch?v=wyEu-hxWA2Y',
-    detailLink: 'https://www.scantooldepot.com/component/eshop/xtool/xt70w?Itemid=0'
+    reviewVideo: 'https://www.xtooltech.com/videos/xt70w-unboxing-overview-xtool-automotive-diagnostic-tool.html',
+    detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-xt70w/'
   },
   {
     id: 'xtool-6',
     name: 'XT70',
-    category: 'Smart Diagnostic',
+    category: 'Gasoline Diagnostic',
     price: 7348,
     image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/xt70-350x350.jpg',
     description: 'XT70 is an automotive smart diagnostic system with a 7-inch LCD display and Android 10 OS. It supports diagnostics for full-system.',
@@ -299,12 +299,12 @@ export const PRODUCTS: Product[] = [
       'VGA to OBD II Main Cable'
     ],
     reviewVideo: '',
-    detailLink: 'https://www.scantooldepot.com/component/eshop/xtool/xt70?Itemid=0'
+    detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-xt70/'
   },
   {
     id: 'xtool-7',
     name: 'H6 PRO 3',
-    category: 'Professional System',
+    category: 'Gasoline Diagnostic',
     price: 30895,
     image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/H6PRO3-350x350.png',
     description: 'Coverage includes U.S., European, Asian and Chinese electric, gas and diesel, and hybrid vehicles. Provides fault code guidance for VAG and BMW.',
@@ -353,13 +353,13 @@ export const PRODUCTS: Product[] = [
       'OBD II-16',
       'HONDA-3', 'BMW-20', 'BENZ-14', 'BENZ-38', 'TOYOTA-17', 'MAZDA-17R', 'KIA-20', 'HYUNDAI/KIA-10', 'NISSAN-14', 'GM/DAEWOO-12', 'UNIVERSAL-3', 'SUZUKI-3', 'FIAT-3', 'CITROEN-2', 'AUDI-4', 'MITSUBISHI-12+16'
     ],
-    reviewVideo: 'https://www.youtube.com/results?search_query=XTOOL+H6+Pro+3+Review',
-    detailLink: 'https://www.scantooldepot.com/component/eshop/xtool/h6-pro-iii?Itemid=0'
+    reviewVideo: 'https://www.xtooltech.com/videos/unboxing-h6pro3-xtool-gasoline-car-diagnosis-tablet-tool.html',
+    detailLink: 'https://www2.xtooltech.com/US/ProductsView/H6P3.html'
   },
   {
     id: 'xtool-8',
     name: 'Prodigy',
-    category: 'Flagship System',
+    category: 'Gasoline Diagnostic',
     price: 69305,
     image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/Prodigy%20main-350x350.png',
     description: 'Prodigy is a high-performance automotive diagnostic tool featuring a 13.3-inch touchscreen, Android 10.0, and advanced communication protocols (DoIP/CAN FD). Designed for electric, gasoline, and hybrid vehicles across global markets, it offers fast diagnostics, 50+ reset and relearn functions, ADAS calibration, and seamless ECU programming. With topology mapping and enhanced diagnostic reports, Prodigy ensures precise and efficient troubleshooting for professionals.',
@@ -403,13 +403,13 @@ export const PRODUCTS: Product[] = [
       'Cigar Lighter Cable',
       'BENZ-14', 'BENZ-38', 'BMW-20', 'CITROEN-2', 'FIAT-3', 'GM/DAEWOO-12', 'HONDA-3', 'KIA-20', 'KIA/HYUNDAI-10', 'MAZDA-17', 'MITSUBISHI/HYUNDAI-12+16', 'NISSAN-14', 'SUZUKI-3', 'TOYOTA-17', 'UNIVERSAL-3', 'VW/AUDI-2+2'
     ],
-    reviewVideo: 'https://www.youtube.com/watch?v=eLrtHdvyOyA',
-    detailLink: 'https://www.scantooldepot.com/component/eshop/xtool/prodigy?Itemid=0'
+    reviewVideo: 'https://www.xtooltech.com/videos/xtool-prodigy-launch-2025-latest-ultra-large-smart-diagnostic-tool.html',
+    detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-prodigy/'
   },
   {
     id: 'xtool-9',
     name: 'Compass',
-    category: 'Flagship System',
+    category: 'Gasoline Diagnostic',
     price: 31730,
     image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/Compass%20main-350x350.png',
     description: 'COMPASS is your ultimate diagnostic companion, designed for efficiency and precision. Featuring a crystal-clear 10.1" display and powerful performance.',
@@ -451,13 +451,13 @@ export const PRODUCTS: Product[] = [
       'Adapter (Type-C to Type-A)',
       'CITROEN-2', 'VW/AUDI-2+2', 'MITSUBISHI/HYUNDAI-12+16', 'UNIVERSAL-3', 'BENZ-14', 'BENZ-38', 'BMW-20', 'GM/DAEWOO-12', 'HONDA-3', 'TOYOTA-17', 'NISSAN-14', 'KIA-20', 'HYUNDAI/KIA-10', 'MAZDA-17', 'SUZUKI-3', 'FIAT-3'
     ],
-    reviewVideo: 'https://www.youtube.com/watch?v=foPtJb1R4d4',
-    detailLink: 'https://www.scantooldepot.com/component/eshop/xtool/compass?Itemid=0'
+    reviewVideo: 'https://www.xtooltech.com/videos/introduce-compass-compass-master-the-guide-has-awakened.html',
+    detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-compass-compass-master/'
   },
   {
     id: 'xtool-10',
     name: 'Compass Master',
-    category: 'Flagship System',
+    category: 'Gasoline Diagnostic',
     price: 33400,
     image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/Compass%20main-350x350.png',
     description: 'COMPASS MASTER (includes J2534 support) is your ultimate diagnostic companion. It enables OEM software connectivity for advanced diagnostics and programming.',
@@ -500,13 +500,13 @@ export const PRODUCTS: Product[] = [
       'Adapter (Type-C to Type-A)',
       'CITROEN-2', 'VW/AUDI-2+2', 'MITSUBISHI/HYUNDAI-12+16', 'UNIVERSAL-3', 'BENZ-14', 'BENZ-38', 'BMW-20', 'GM/DAEWOO-12', 'HONDA-3', 'TOYOTA-17', 'NISSAN-14', 'KIA-20', 'HYUNDAI/KIA-10', 'MAZDA-17', 'SUZUKI-3', 'FIAT-3'
     ],
-    reviewVideo: 'https://www.youtube.com/watch?v=foPtJb1R4d4',
-    detailLink: 'https://www.scantooldepot.com/component/eshop/xtool/compass-master?Itemid=0'
+    reviewVideo: 'https://www.xtooltech.com/videos/compass-compass-master-unboxing-first-look-whats-inside-the-box.html',
+    detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-usa-compass-compass-master/'
   },
   {
     id: 'xtool-11',
     name: 'D9HD',
-    category: 'Heavy Duty',
+    category: 'Diesel Diagnostic',
     price: 31713,
     image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/D9HD%201-350x350.png',
     description: 'D9HD is an automotive smart diagnostic system designed for passenger cars, commercial vehicles, and heavy-duty trucks.It supports full-system diagnostics for passenger cars, commercial vehicles, and heavy-duty trucks, including reading ECU version information, reading fault codes, live data, freeze frames and bi-directional control test. 42 common special functions, such as throttle matching, ABS bleed, maintenance light reset, EPB test, SAS, BMS, injector coding, DPF regeneration, and TPMS reset are supported. Under the system menu, you can also explore a wealth of special functions. 98% vehicle coverage, work on more than 85 brands, 10000 cars.',
@@ -559,8 +559,64 @@ export const PRODUCTS: Product[] = [
       'Jumper Adapter',
       'OBD-R16', 'ECONTROLS-4', 'WOODWARD-3', 'ISUZU-3', 'ISUZU-20', 'YUCHAI-4', 'DENSO-12', 'CUMMINS-16', 'CUMMINS-9', 'HITACHI-4', 'HITACHI-6', 'CAT-9', 'VOLVO-8', 'OBD II-16', 'HONDA-3', 'BMW-20', 'BENZ-14', 'BENZ-38', 'TOYOTA-17', 'MAZDA-17R', 'KIA-20', 'HYUNDAI/KIA-10', 'NISSAN-14', 'GM/DAEWOO-12', 'UNIVERSAL-3', 'SUZUKI-3', 'FIAT-3', 'CITROEN-2', 'AUDI-4', 'MITSUBISHI-12+16'
     ],
-    reviewVideo: '',
-    detailLink: 'https://www.scantooldepot.com/component/eshop/xtool/d9hd?Itemid=0'
+    reviewVideo: 'https://www.xtooltech.com/videos/xtool-adas-calibration-system-unboxing-video.html',
+    detailLink: 'https://www.xtooltech.com/products/diesel-diagnostic-tool-d9hd/'
+  },
+  {
+    id: 'xtool-15',
+    name: 'N9EV 2',
+    category: 'EV Diagnostic',
+    price: 0,
+    image: 'https://www.xtooltech.com/uploads/images/n9ev-2-bulk.webp',
+    description: 'N9EV 2 is XTOOL’s advanced EV diagnostic tool built for BEV, PHEV, and EREV platforms. It supports full-system diagnosis, battery pack detection, BMS data recovery, off-vehicle component testing, topology mapping, and continuous online upgrades for modern new energy vehicle repair.',
+    features: [
+      'Full NEV coverage for BEV, PHEV, and EREV models',
+      'Battery pack detection and BMS data recovery',
+      'Off-vehicle testing for key EV components',
+      'Topology mapping for clearer diagnostic visibility',
+      'Continuous online upgrades for evolving EV platforms'
+    ],
+    techSpecs: [
+      'Tablet Model: P902',
+      'Processor: Quad core 1.5GHz',
+      'OS: Android 10.0',
+      'Storage (RAM+ROM): 8+128G',
+      'Display: 9.7 inch 1024*768',
+      'Connectivity: USB Type-C',
+      'Battery: 6400 mAh, 7.2V',
+      'WiFi: Y',
+      'Bluetooth: Y',
+      'Working Temp.: 0~40℃',
+      'Storage Temp.: -10~50℃',
+      'Vehicle Volt.: 9~36V',
+      'Communication Method: Wi-Fi, USB',
+      'Free Update: 3 YEARS',
+      'Warranty: 2 YEARS',
+      'Compatible Protocol: CAN FD, DoIP'
+    ],
+    packingList: [
+      'Carton',
+      'Tool Case',
+      'Packing List',
+      'Certificate of Quality',
+      'Quick Start Guide',
+      'Tablet',
+      'VCI Box',
+      'Power Supply (PD)',
+      'Charging Adapter (EU)',
+      'Charging Adapter (UK)',
+      'Data Cable (Type-C to Type-C)',
+      'Adapter (Type-C to Type-A)',
+      'Data Cable (Type-C to Type-B)',
+      'PD-12V Power Cable (Type-C to DC)',
+      'Cigar Lighter Cable',
+      'X₂PROG Programmer',
+      'M605 PCBA',
+      'XTA004 Cable',
+      'Charging Dock'
+    ],
+    reviewVideo: 'https://www.xtooltech.com/videos/that%27s-two-scan-tools-for-the-price-of-one-xtool-n9ev-scan-tool-unbox-review.html',
+    detailLink: 'https://www.xtooltech.com/products/n9ev-2/'
   },
   {
     id: 'xtool-16',
@@ -588,7 +644,7 @@ export const PRODUCTS: Product[] = [
     ],
     packingList: [],
     reviewVideo: 'https://youtu.be/Z4qAbF6ngm8?si=AU3isRFiBGdHBxdX',
-    detailLink: ''
+    detailLink: 'https://www.xtooltech.com/products/ev-diagnostic-tools-e2s/'
   },
   {
     id: 'xtool-17',
@@ -617,8 +673,8 @@ export const PRODUCTS: Product[] = [
       'Dimensions: 311 × 190 × 41 mm'
     ],
     packingList: [],
-    reviewVideo: 'https://youtu.be/uDknwOoKcvg?si=yAYJKxhznvLNoWSm',
-    detailLink: ''
+    reviewVideo: 'https://www.xtooltech.com/videos/power-up-your-ev-diagnostics-with-xtool-e2pro.html',
+    detailLink: 'https://www.xtooltech.com/products/ev-diagnostic-tools-e2-pro/'
   },
   {
     id: 'xtool-18',
@@ -644,13 +700,13 @@ export const PRODUCTS: Product[] = [
       'Operating Temperature: 0~40℃'
     ],
     packingList: [],
-    reviewVideo: 'https://youtu.be/rEoSIvwEWu0?si=y_q1jDkpw18YAant',
+    reviewVideo: 'https://www.xtooltech.com/videos/introducing-xt50-the-portable-smart-diagnostic-tool-from-xtool.html',
     detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-xt50/'
   },
   {
     id: 'xtool-19',
     name: 'XPortal',
-    category: 'Diagnostic Tools',
+    category: 'J2534',
     price: 0,
     image: 'https://www.xtooltech.com/uploads/images/j2534-xportal-bulk.webp',
     description: 'The XTOOL XPortal is a professional-grade J2534 Pass-Thru VCI (Vehicle Communication Interface) device designed to bridge the gap between diagnostic tools and vehicle manufacturer (OEM) software for precise ECU programming and coding.',
@@ -676,7 +732,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'xtool-20',
-    name: 'BEC2415',
+    name: 'BEC2440',
     category: 'EV Diagnostic',
     price: 0,
     image: 'https://www.xtooltech.com/uploads/images/image_1780133616.webp',
@@ -702,12 +758,55 @@ export const PRODUCTS: Product[] = [
     ],
     packingList: [],
     reviewVideo: '',
-    detailLink: ''
+    detailLink: 'https://www.xtooltech.com/products/bec2440-battery-balancer/'
+  },
+  {
+    id: 'xtool-21',
+    name: 'HDGURU',
+    category: 'Diesel Diagnostic',
+    price: 0,
+    image: 'https://www.xtooltech.com/uploads/images/diesel-diagnostic-tool-hdguru-bulk.webp',
+    description: 'HDGURU is XTOOL’s entry-level heavy-duty diagnostic tool for small fleet mechanics. It supports Cummins ECU diagnostics, heavy-duty OBD-II functions, live data, code clearing, and more than 60 bi-directional tests.',
+    features: [
+      'Entry-level heavy-duty diagnostic device',
+      'Linux-based 5.45-inch screen',
+      'Supports Cummins ECU diagnostics',
+      'Heavy-duty OBD-II scanning and live data',
+      '60+ bi-directional tests for workshop use'
+    ],
+    techSpecs: [
+      'Processor: Quad-core Cortex-A7@1.2GHz',
+      'OS: Linux',
+      'Storage (RAM+ROM): 128MB+64G support TFCard',
+      'Display: 5.45-inch 720*1440',
+      'Connectivity: USB Type-C VGA',
+      'Battery: 3150, 3.6V',
+      'WiFi: WiFi 2.4 Ghz',
+      'Working Temp.: 0~40℃',
+      'Storage Temp.: -10~50℃',
+      'Vehicle Volt.: 9~36V',
+      'Communication Method: Wired',
+      'Free Update: Lifetime',
+      'Warranty: 2 YEARS',
+      'Compatible Protocols: CAN FD'
+    ],
+    packingList: [
+      'Tablet',
+      'USB Type-C Main Cable',
+      'Cummins 6+9 Adapter',
+      'VGA to OBDII-16 Main Cable',
+      'Color Carton',
+      'Packing List',
+      'Certificate of Quality',
+      'User Manual'
+    ],
+    reviewVideo: 'https://www.xtooltech.com/products/diesel-diagnostic-tool-hdguru-usa/',
+    detailLink: 'https://www.xtooltech.com/products/diesel-diagnostic-tool-hdguru-usa/'
   },
   {
     id: 'xtool-13',
     name: 'OBD2 Code Reader – AD20 Pro',
-    category: 'Code Reader',
+    category: 'OBD2 Code Reader',
     price: 0,
     image: 'https://en.xtooltech.com/uploads/images/obd2-code-reader-ad20pro-bulk.webp',
     description: 'Advancer AD20 Pro is a smart OBD dongle that connects via Bluetooth to your smartphone for full-system diagnostics and maintenance light reset. It can read and clear fault codes on U.S., Asian, European, and Chinese vehicles from 1996 onwards, perform smog checks, vehicle deep checks, live data viewing, and battery health checks. The tool enables trip and fuel consumption recording, features integrated driving behavior monitoring, and offers free downloadable brand-specific software—empowering both diagnostics and driver skill improvement.',
@@ -735,7 +834,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'xtool-14',
     name: 'A30M OBD2 Code Reader',
-    category: 'Code Reader',
+    category: 'OBD2 Code Reader',
     price: 0,
     image: 'https://en.xtooltech.com/uploads/images/obd2-code-reader-a30m-bulk.webp',
     description: 'XTOOL Anyscan A30M is a compact wireless OBD2 scanner designed for DIY enthusiasts and professional technicians, compatible with iOS and Android platforms. Our XTOOL A30 m provides full-system diagnostics, bi-directional control, and over 26 maintenance service functions, including oil reset, EPB, TPMS, ABS bleeding, and more. The newly added FCA AutoAuth feature supports 2018 and newer models of Jeep, Dodge, Chrysler, Porsche, Maserati, and Fiat, bypassing security restrictions for smooth diagnostics and full functionality.',
@@ -761,7 +860,9 @@ export const PRODUCTS: Product[] = [
       'Free Update：Lifetime',
       'Warranty：2 YEARS',
       'Compatible Protocol：CAN FD'
-    ]
+    ],
+    reviewVideo: 'https://www.xtooltech.com/videos/master-xtool-a30-anyscan-app-a-complete-how-to-guide.html',
+    detailLink: 'https://www.xtooltech.com/products/obd2-code-reader-a30m/'
   }
 ];
 
