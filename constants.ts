@@ -800,7 +800,6 @@ export const PRODUCTS: Product[] = [
       'Certificate of Quality',
       'User Manual'
     ],
-    reviewVideo: 'https://www.xtooltech.com/products/diesel-diagnostic-tool-hdguru-usa/',
     detailLink: 'https://www.xtooltech.com/products/diesel-diagnostic-tool-hdguru-usa/'
   },
   {

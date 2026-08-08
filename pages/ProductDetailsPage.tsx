@@ -77,12 +77,6 @@ const ProductDetailsPage: React.FC = () => {
     return <Navigate to="/shop" replace />;
   }
 
-  const gallery = product.gallery?.length ? product.gallery : [product.image];
-
-  React.useEffect(() => {
-    setActiveImage(gallery[0]);
-  }, [gallery, product.id]);
-
   const tabs = [
     { id: 'description', label: 'Description' },
     { id: 'specs', label: 'Tech Specs' },
