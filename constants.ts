@@ -736,7 +736,7 @@ export const PRODUCTS: Product[] = [
     category: 'EV Diagnostic',
     price: 0,
     image: 'https://www.xtooltech.com/uploads/images/image_1780133616.webp',
-    description: 'The XTOOL BEC2415 is a professional-grade lithium battery charge-discharge balancer designed for the maintenance and repair of electric vehicle (EV) and hybrid battery modules.',
+    description: 'The XTOOL BEC2440 is a professional-grade lithium battery charge-discharge balancer designed for the maintenance and repair of electric vehicle (EV) and hybrid battery modules.',
     features: [
       'High-Efficiency Balancing: Supports up to 20A for both charging and discharging.',
       'Broad Compatibility: Compatible with various lithium battery chemistries, including NCM and LiFePO₄.',

@@ -64,10 +64,13 @@ export interface Product {
   gallery?: string[];
   description: string;
   features: string[];
+  gallery?: string[];
   packingList?: string[];
   techSpecs?: string[];
   reviewVideo?: string;
   detailLink?: string;
+  badgeLabel?: string;
+  badgeExpiresAt?: string;
 }
 
 export interface CartItem extends Product {

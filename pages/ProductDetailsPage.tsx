@@ -7,6 +7,51 @@ import { useCart } from '../context/CartContext';
 import { Check, Truck, Shield } from 'lucide-react';
 import QuoteModal from '../components/QuoteModal';
 
+const PRODUCT_IMAGE_FALLBACK =
+  'data:image/svg+xml;charset=UTF-8,' +
+  encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+      <rect width="1200" height="1200" fill="#f3f4f6"/>
+      <rect x="140" y="220" width="920" height="760" rx="40" fill="#ffffff" stroke="#d1d5db" stroke-width="8"/>
+      <path d="M380 780l120-140 90 100 120-150 160 190z" fill="#cbd5e1"/>
+      <circle cx="470" cy="500" r="55" fill="#cbd5e1"/>
+      <text x="600" y="920" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#6b7280">Image unavailable</text>
+    </svg>`
+  );
+
+const getYouTubeEmbedUrl = (url: string) => {
+  try {
+    const parsed = new URL(url);
+    const hostname = parsed.hostname.toLowerCase();
+
+    if (hostname.includes('youtu.be')) {
+      const videoId = parsed.pathname.replace('/', '');
+      return videoId ? `https://www.youtube.com/embed/${videoId}` : null;
+    }
+
+    if (hostname.includes('youtube.com')) {
+      const videoId = parsed.searchParams.get('v');
+      if (videoId) {
+        return `https://www.youtube.com/embed/${videoId}`;
+      }
+
+      const shortsMatch = parsed.pathname.match(/\/shorts\/([^/]+)/);
+      if (shortsMatch?.[1]) {
+        return `https://www.youtube.com/embed/${shortsMatch[1]}`;
+      }
+
+      const embedMatch = parsed.pathname.match(/\/embed\/([^/]+)/);
+      if (embedMatch?.[1]) {
+        return `https://www.youtube.com/embed/${embedMatch[1]}`;
+      }
+    }
+  } catch {
+    return null;
+  }
+
+  return null;
+};
+
 const ProductDetailsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { addToCart } = useCart();
@@ -15,6 +60,18 @@ const ProductDetailsPage: React.FC = () => {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = React.useState(false);
   
   const product = PRODUCTS.find(p => p.id === id);
+  const gallery = product?.gallery?.length ? product.gallery : product ? [product.image] : [];
+  const initialImage = gallery[0] ?? '';
+
+  React.useEffect(() => {
+    if (initialImage) {
+      setActiveImage(initialImage);
+    }
+  }, [initialImage]);
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!product) {
     return <Navigate to="/shop" replace />;
@@ -43,13 +100,16 @@ const ProductDetailsPage: React.FC = () => {
             {/* Image Section */}
             <div className="flex flex-col items-center justify-center bg-white border border-gray-100 rounded-lg p-4">
               <div className="aspect-square w-full max-w-[400px] overflow-hidden">
-                <motion.img 
+                  <motion.img 
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5 }}
-                  src={activeImage || product.image} 
+                  src={activeImage || initialImage || product.image}
                   alt={product.name}
                   className="w-full h-full object-contain mix-blend-multiply"
+                  onError={(e) => {
+                    e.currentTarget.src = PRODUCT_IMAGE_FALLBACK;
+                  }}
                 />
               </div>
               {gallery.length > 1 && (
@@ -67,6 +127,10 @@ const ProductDetailsPage: React.FC = () => {
                         src={image}
                         alt={`${product.name} view ${index + 1}`}
                         className="w-full h-full object-contain mix-blend-multiply"
+                        loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.src = PRODUCT_IMAGE_FALLBACK;
+                        }}
                       />
                     </button>
                   ))}
@@ -195,25 +259,32 @@ const ProductDetailsPage: React.FC = () => {
                 {activeTab === 'video' && (
                   <div className="flex flex-col items-center justify-center py-10 text-center">
                     {product.reviewVideo ? (
-                      <div className="w-full max-w-3xl aspect-video rounded-xl overflow-hidden shadow-2xl shadow-black/10 border border-gray-100">
-                        {product.reviewVideo.includes('youtube.com') || product.reviewVideo.includes('youtu.be') ? (
-                          <iframe
-                            className="w-full h-full"
-                            src={`https://www.youtube.com/embed/${product.reviewVideo.split('v=')[1] || product.reviewVideo.split('/').pop()}`}
-                            title="YouTube video player"
-                            frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                          ></iframe>
-                        ) : (
-                          <div className="p-10 bg-gray-50 h-full flex flex-col items-center justify-center">
-                            <p className="mb-4 font-bold">Review Video Available At:</p>
-                            <a href={product.reviewVideo} target="_blank" rel="noopener noreferrer" className="text-swiss-red font-black underline uppercase tracking-widest">
-                              Watch Review on YouTube
-                            </a>
+                      (() => {
+                        const embedUrl = getYouTubeEmbedUrl(product.reviewVideo || '');
+
+                        if (!embedUrl) {
+                          return (
+                            <div className="w-full max-w-3xl rounded-xl border border-gray-100 bg-gray-50 p-10">
+                              <p className="font-bold text-gray-700">
+                                Video is not available in an embeddable YouTube format yet.
+                              </p>
+                            </div>
+                          );
+                        }
+
+                        return (
+                          <div className="w-full max-w-3xl aspect-video rounded-xl overflow-hidden shadow-2xl shadow-black/10 border border-gray-100">
+                            <iframe
+                              className="w-full h-full"
+                              src={embedUrl}
+                              title="YouTube video player"
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            ></iframe>
                           </div>
-                        )}
-                      </div>
+                        );
+                      })()
                     ) : (
                       <div className="text-gray-400 italic font-bold">No review video available for this product yet.</div>
                     )}

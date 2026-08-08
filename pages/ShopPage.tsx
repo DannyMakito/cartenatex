@@ -7,6 +7,18 @@ import { Filter, Truck, Search } from 'lucide-react';
 
 import QuoteModal from '../components/QuoteModal';
 
+const PRODUCT_IMAGE_FALLBACK =
+  'data:image/svg+xml;charset=UTF-8,' +
+  encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+      <rect width="1200" height="1200" fill="#f3f4f6"/>
+      <rect x="140" y="220" width="920" height="760" rx="40" fill="#ffffff" stroke="#d1d5db" stroke-width="8"/>
+      <path d="M380 780l120-140 90 100 120-150 160 190z" fill="#cbd5e1"/>
+      <circle cx="470" cy="500" r="55" fill="#cbd5e1"/>
+      <text x="600" y="920" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#6b7280">Image unavailable</text>
+    </svg>`
+  );
+
 const ShopPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -30,6 +42,12 @@ const ShopPage: React.FC = () => {
       return categoryMatch && searchMatch;
     });
   }, [selectedCategory, searchQuery]);
+
+  const isBadgeVisible = (product: (typeof PRODUCTS)[number]) => {
+    if (!product.badgeLabel) return false;
+    if (!product.badgeExpiresAt) return true;
+    return new Date(product.badgeExpiresAt).getTime() > Date.now();
+  };
 
   return (
     <div className="bg-[#fcfcfc] min-h-screen pt-10 pb-20 font-sans">
@@ -127,14 +145,19 @@ const ShopPage: React.FC = () => {
                       {/* Image Container */}
                       <div className="aspect-square bg-white mb-6 overflow-hidden relative rounded-xl border border-gray-50 p-6 flex items-center justify-center">
                         <img 
-                          src={product.image} 
+                          src={product.gallery?.[0] ?? product.image}
                           alt={product.name}
                           className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500 ease-in-out mix-blend-multiply"
+                          loading="lazy"
+                          onError={(e) => {
+                            e.currentTarget.src = PRODUCT_IMAGE_FALLBACK;
+                          }}
                         />
-                        {/* Badge */}
-                        <div className="absolute top-4 left-4 bg-swiss-red text-white px-3 py-1 text-[10px] font-black uppercase tracking-widest rounded-full">
-                          New
-                        </div>
+                        {isBadgeVisible(product) && (
+                          <div className="absolute top-4 left-4 bg-swiss-red text-white px-3 py-1 text-[10px] font-black uppercase tracking-widest rounded-full">
+                            {product.badgeLabel}
+                          </div>
+                        )}
                       </div>
 
                       {/* Product Info */}

@@ -5,6 +5,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useCart } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
 
+const PRODUCT_IMAGE_FALLBACK =
+  'data:image/svg+xml;charset=UTF-8,' +
+  encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+      <rect width="1200" height="1200" fill="#f3f4f6"/>
+      <rect x="140" y="220" width="920" height="760" rx="40" fill="#ffffff" stroke="#d1d5db" stroke-width="8"/>
+      <path d="M380 780l120-140 90 100 120-150 160 190z" fill="#cbd5e1"/>
+      <circle cx="470" cy="500" r="55" fill="#cbd5e1"/>
+      <text x="600" y="920" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#6b7280">Image unavailable</text>
+    </svg>`
+  );
+
 const CartDrawer: React.FC = () => {
   const { isCartOpen, closeCart, cart, updateQuantity, removeFromCart, cartTotal } = useCart();
   const navigate = useNavigate();
@@ -61,9 +73,13 @@ const CartDrawer: React.FC = () => {
                     <div key={item.id} className="flex gap-4">
                       <div className="w-24 h-24 bg-gray-100 rounded-md overflow-hidden flex-shrink-0">
                         <img 
-                          src={item.image} 
+                          src={item.gallery?.[0] ?? item.image}
                           alt={item.name} 
                           className="w-full h-full object-cover"
+                          loading="lazy"
+                          onError={(e) => {
+                            e.currentTarget.src = PRODUCT_IMAGE_FALLBACK;
+                          }}
                         />
                       </div>
                       <div className="flex-1 flex flex-col justify-between">
