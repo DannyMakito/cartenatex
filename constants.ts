@@ -1,5 +1,102 @@
 import { NavItem, ServiceItem, BenefitItem, FAQItem, ServiceDetailData, BrandData, Product } from './types';
 
+type XtoolSeed = {
+  id: string;
+  name: string;
+  category: Product['category'];
+  slug: string;
+};
+
+const xtoolImageUrl = (slug: string) => `https://en.xtooltech.com/uploads/images/${slug}.webp`;
+
+const xtoolDescription = (name: string, category: string) =>
+  `Official XTOOL ${name} from the ${category} range.`;
+
+const xtoolFeatures = (name: string, category: string) => [
+  `Official XTOOL ${name}`,
+  `Listed under ${category} in the official XTOOL catalog`,
+  'Manual verification of image and media URLs recommended'
+];
+
+const XTOOL_MISSING_SEEDS: XtoolSeed[] = [
+  { id: 'xtool-15', name: 'V1000', category: 'EV Diagnostic', slug: 'v1000' },
+  { id: 'xtool-16', name: 'AT02', category: 'EV Diagnostic', slug: 'at02' },
+  { id: 'xtool-17', name: 'A30X', category: 'OBD2 Code Reader', slug: 'a30x' },
+  { id: 'xtool-18', name: 'A80', category: 'Key Programmer', slug: 'a80' },
+  { id: 'xtool-19', name: 'IP616 (2024)', category: 'Key Programmer', slug: 'ip616-2024' },
+  { id: 'xtool-20', name: 'IP819 (2024)', category: 'Key Programmer', slug: 'ip819-2024' },
+  { id: 'xtool-21', name: 'IP900', category: 'Key Programmer', slug: 'ip900' },
+  { id: 'xtool-22', name: 'IP900 BT', category: 'Key Programmer', slug: 'ip900-bt' },
+  { id: 'xtool-23', name: 'IP900S', category: 'Key Programmer', slug: 'ip900s' },
+  { id: 'xtool-24', name: 'IP919 MAX', category: 'Key Programmer', slug: 'ip919-max' },
+  { id: 'xtool-25', name: 'IP919 Pro', category: 'Key Programmer', slug: 'ip919-pro' },
+  { id: 'xtool-26', name: 'IP919', category: 'Key Programmer', slug: 'ip919' },
+  { id: 'xtool-27', name: 'IP500 DJC', category: 'Key Programmer', slug: 'ip500-djc' },
+  { id: 'xtool-28', name: 'IP500 BMR', category: 'Key Programmer', slug: 'ip500-bmr' },
+  { id: 'xtool-29', name: 'IP500-BCC', category: 'Key Programmer', slug: 'ip500-bcc' },
+  { id: 'xtool-30', name: 'IP500-TLS', category: 'Key Programmer', slug: 'ip500-tls' },
+  { id: 'xtool-31', name: 'IP819TP', category: 'TPMS Tools', slug: 'ip819tp' },
+  { id: 'xtool-32', name: 'IP508', category: 'Key Programmer', slug: 'ip508' },
+  { id: 'xtool-33', name: 'IP508S', category: 'Key Programmer', slug: 'ip508s' },
+  { id: 'xtool-34', name: 'IP608', category: 'Key Programmer', slug: 'ip608' },
+  { id: 'xtool-35', name: 'D9S', category: 'Diagnostic Tools', slug: 'd9s' },
+  { id: 'xtool-36', name: 'D9EV', category: 'EV Diagnostic', slug: 'd9ev' },
+  { id: 'xtool-37', name: 'D9S Pro', category: 'Diagnostic Tools', slug: 'd9s-pro' },
+  { id: 'xtool-38', name: 'D9 MAX', category: 'Diagnostic Tools', slug: 'd9-max' },
+  { id: 'xtool-39', name: 'D8 (2026)', category: 'Diagnostic Tools', slug: 'd8-2026' },
+  { id: 'xtool-40', name: 'D8BT (2026)', category: 'Diagnostic Tools', slug: 'd8bt-2026' },
+  { id: 'xtool-41', name: 'D8S', category: 'Diagnostic Tools', slug: 'd8s' },
+  { id: 'xtool-42', name: 'D8W', category: 'Diagnostic Tools', slug: 'd8w' },
+  { id: 'xtool-43', name: 'D7', category: 'Diagnostic Tools', slug: 'd7' },
+  { id: 'xtool-44', name: 'D7BT (2025)', category: 'Diagnostic Tools', slug: 'd7bt-2025' },
+  { id: 'xtool-45', name: 'D7S', category: 'Diagnostic Tools', slug: 'd7s' },
+  { id: 'xtool-46', name: 'D7W', category: 'Diagnostic Tools', slug: 'd7w' },
+  { id: 'xtool-47', name: 'D7X (2026)', category: 'Diagnostic Tools', slug: 'd7x-2026' },
+  { id: 'xtool-48', name: 'D6', category: 'Diagnostic Tools', slug: 'd6' },
+  { id: 'xtool-49', name: 'D6S', category: 'Diagnostic Tools', slug: 'd6s' },
+  { id: 'xtool-50', name: 'D5', category: 'Diagnostic Tools', slug: 'd5' },
+  { id: 'xtool-51', name: 'D5S', category: 'Diagnostic Tools', slug: 'd5s' },
+  { id: 'xtool-52', name: 'A30', category: 'Diagnostic Tools', slug: 'a30' },
+  { id: 'xtool-53', name: 'A30D', category: 'Diagnostic Tools', slug: 'a30d' },
+  { id: 'xtool-54', name: 'AD20', category: 'OBD2 Code Reader', slug: 'ad20' },
+  { id: 'xtool-55', name: 'AD20 PRO', category: 'OBD2 Code Reader', slug: 'ad20-pro' },
+  { id: 'xtool-56', name: 'A80Pro', category: 'Key Programmer', slug: 'a80pro' },
+  { id: 'xtool-57', name: 'A80Pro MASTER', category: 'Key Programmer', slug: 'a80pro-master' },
+  { id: 'xtool-58', name: 'PS701pro', category: 'Key Programmer', slug: 'ps701pro' },
+  { id: 'xtool-59', name: 'TP580', category: 'TPMS Tools', slug: 'tp580' },
+  { id: 'xtool-60', name: 'TP500', category: 'TPMS Tools', slug: 'tp500' },
+  { id: 'xtool-61', name: 'TP380', category: 'TPMS Tools', slug: 'tp380' },
+  { id: 'xtool-62', name: 'TP300', category: 'TPMS Tools', slug: 'tp300' },
+  { id: 'xtool-63', name: 'TP150', category: 'TPMS Tools', slug: 'tp150' },
+  { id: 'xtool-64', name: 'TS100', category: 'TPMS Tools', slug: 'ts100' },
+  { id: 'xtool-65', name: 'TS100PRO', category: 'TPMS Tools', slug: 'ts100pro' },
+  { id: 'xtool-66', name: 'IK618 (2024)', category: 'Key Programmer', slug: 'ik618-2024' },
+  { id: 'xtool-67', name: 'X100PRO2', category: 'Key Programmer', slug: 'x100pro2' },
+  { id: 'xtool-68', name: 'X100PAD3 (2024)', category: 'Key Programmer', slug: 'x100pad3-2024' },
+  { id: 'xtool-69', name: 'X100 PADS', category: 'Key Programmer', slug: 'x100-pads' },
+  { id: 'xtool-70', name: 'X100MAX', category: 'Key Programmer', slug: 'x100max' },
+  { id: 'xtool-71', name: 'X100MAX 2', category: 'Key Programmer', slug: 'x100max-2' }
+];
+
+const XTOOL_MISSING_PRODUCTS: Product[] = XTOOL_MISSING_SEEDS.map((item) => {
+  const image = xtoolImageUrl(item.slug);
+
+  return {
+    id: item.id,
+    name: item.name,
+    category: item.category,
+    price: 0,
+    image,
+    gallery: [image],
+    description: xtoolDescription(item.name, item.category),
+    features: xtoolFeatures(item.name, item.category),
+    packingList: [],
+    techSpecs: [],
+    reviewVideo: '',
+    detailLink: `https://www.xtooltech.com/products/${item.slug}/`
+  };
+});
+
 export const NAV_ITEMS: NavItem[] = [
   { label: 'About', href: '/about' },
   { label: 'Offers', href: '/#offers' },
@@ -862,7 +959,8 @@ export const PRODUCTS: Product[] = [
     ],
     reviewVideo: 'https://www.xtooltech.com/videos/master-xtool-a30-anyscan-app-a-complete-how-to-guide.html',
     detailLink: 'https://www.xtooltech.com/products/obd2-code-reader-a30m/'
-  }
+  },
+  ...XTOOL_MISSING_PRODUCTS
 ];
 
 export const SERVICES: ServiceItem[] = [
