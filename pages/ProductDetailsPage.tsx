@@ -11,6 +11,7 @@ const ProductDetailsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { addToCart } = useCart();
   const [activeTab, setActiveTab] = React.useState('description');
+  const [activeImage, setActiveImage] = React.useState<string>('');
   const [isQuoteModalOpen, setIsQuoteModalOpen] = React.useState(false);
   
   const product = PRODUCTS.find(p => p.id === id);
@@ -18,6 +19,12 @@ const ProductDetailsPage: React.FC = () => {
   if (!product) {
     return <Navigate to="/shop" replace />;
   }
+
+  const gallery = product.gallery?.length ? product.gallery : [product.image];
+
+  React.useEffect(() => {
+    setActiveImage(gallery[0]);
+  }, [gallery, product.id]);
 
   const tabs = [
     { id: 'description', label: 'Description' },
@@ -40,11 +47,31 @@ const ProductDetailsPage: React.FC = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5 }}
-                  src={product.image} 
+                  src={activeImage || product.image} 
                   alt={product.name}
                   className="w-full h-full object-contain mix-blend-multiply"
                 />
               </div>
+              {gallery.length > 1 && (
+                <div className="mt-4 grid grid-cols-4 gap-3 w-full max-w-[400px]">
+                  {gallery.map((image, index) => (
+                    <button
+                      key={`${product.id}-gallery-${index}`}
+                      type="button"
+                      onClick={() => setActiveImage(image)}
+                      className={`aspect-square rounded-lg border p-2 transition-all ${
+                        activeImage === image ? 'border-swiss-red ring-2 ring-swiss-red/20' : 'border-gray-100 hover:border-gray-300'
+                      }`}
+                    >
+                      <img
+                        src={image}
+                        alt={`${product.name} view ${index + 1}`}
+                        className="w-full h-full object-contain mix-blend-multiply"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Details Section */}
