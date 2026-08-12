@@ -724,7 +724,7 @@ export const PRODUCTS: Product[] = [
     name: 'N9EV 2',
     category: 'EV Diagnostic',
     price: 0,
-    image: 'https://www.xtooltech.com/uploads/images/n9ev-2-bulk.webp',
+    image: 'https://www.xtooltech.com/uploads/images/N9EV-2-2.webp',
     description: 'N9EV 2 is XTOOL’s advanced EV diagnostic tool built for BEV, PHEV, and EREV platforms. It supports full-system diagnosis, battery pack detection, BMS data recovery, off-vehicle component testing, topology mapping, and continuous online upgrades for modern new energy vehicle repair.',
     features: [
       'Full NEV coverage for BEV, PHEV, and EREV models',
@@ -1300,7 +1300,7 @@ export const SERVICES: ServiceItem[] = [
   },
   {
     title: 'Diagnostics toool',
-    image: 'https://th.bing.com/th/id/OIP.yJFYmsrWH2RUZ74Q4_-Q2gHaEo?w=315&h=196&c=7&r=0&o=7&pid=1.7&rm=3',
+    image: 'https://i.postimg.cc/ZqmV174d/IMG-20260810-WA0025.jpg',
     items: ['smart scanner ', 'heavey duty/ hand held']
   },
   {
