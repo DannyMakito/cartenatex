@@ -665,7 +665,7 @@ export const PRODUCTS: Product[] = [
     name: 'D9HD',
     category: 'Diesel Diagnostic',
     price: 31713,
-    image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/D9HD%201-350x350.png',
+    image: 'https://www.xtooltech.com/uploads/images/diesel-diagnostic-tool-d9hd-bulk.webp',
     description: 'D9HD is an automotive smart diagnostic system designed for passenger cars, commercial vehicles, and heavy-duty trucks.It supports full-system diagnostics for passenger cars, commercial vehicles, and heavy-duty trucks, including reading ECU version information, reading fault codes, live data, freeze frames and bi-directional control test. 42 common special functions, such as throttle matching, ABS bleed, maintenance light reset, EPB test, SAS, BMS, injector coding, DPF regeneration, and TPMS reset are supported. Under the system menu, you can also explore a wealth of special functions. 98% vehicle coverage, work on more than 85 brands, 10000 cars.',
     features: [
       'Full System Diagnostics for Passenger Cars, Commercial Vehicles, and Heavy-Duty Trucks',
