@@ -172,7 +172,7 @@ export const PRODUCTS: Product[] = [
     name: 'D9HD',
     category: 'Diesel Diagnostic',
     price: 40063,
-    image: 'https://en.xtooltech.com/uploads/images/diesel-diagnostic-tool-d9hd-bulk.webp',
+    image: 'https://www.xtooltech.com/uploads/images/diesel-diagnostic-tool-d9hd-factory_1763446596.webp',
     description: 'D9HD is the ultimate dual-use diagnostic tablet for both 12V cars and 24V heavy-duty trucks, ideal for workshops, service centers, and mobile technicians. Running Android 10, it boasts a 9.7″ HD touchscreen, a quad-core 1.8 GHz CPU, 2GB RAM, and 128GB storage, paired with a 10,000 mAh battery and 8MP rear camera. It delivers full-system diagnostics, online/offline ECU coding, topology mapping, bi-directional controls, key programming, and over 40+ special service functions. Enjoy 3 years of free software updates and extensive coverage spanning 10,000+ models—professional-grade, yet truly portable.',
    
     features: [
