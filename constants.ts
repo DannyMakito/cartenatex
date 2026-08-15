@@ -78,6 +78,10 @@ const XTOOL_MISSING_PRIMARY_IMAGES: Record<string, string> = {
   'x100max-2': 'https://www.xtooltech.com/uploads/image/20260725/key-programmers-x100max2.webp'
 };
 
+const XTOOL_MISSING_REVIEW_VIDEOS: Record<string, string> = {
+  'a30x': 'https://www.youtube.com/embed/i4xNvtTwNu0?si=frS2NkIQqcTg0dmh'
+};
+
 const XTOOL_MISSING_SEEDS: XtoolSeed[] = [
   { id: 'xtool-100', name: 'V1000', category: 'EV Diagnostic', slug: 'v1000' },
   { id: 'xtool-101', name: 'AT02', category: 'EV Diagnostic', slug: 'at02' },
@@ -140,6 +144,7 @@ const XTOOL_MISSING_SEEDS: XtoolSeed[] = [
 
 const XTOOL_MISSING_PRODUCTS: Product[] = XTOOL_MISSING_SEEDS.map((item) => {
   const image = XTOOL_MISSING_PRIMARY_IMAGES[item.slug] ?? xtoolImageUrl(item.slug);
+  const reviewVideo = XTOOL_MISSING_REVIEW_VIDEOS[item.slug] ?? 'no available video';
 
   return {
     id: item.id,
@@ -152,7 +157,7 @@ const XTOOL_MISSING_PRODUCTS: Product[] = XTOOL_MISSING_SEEDS.map((item) => {
     features: xtoolFeatures(item.name, item.category),
     packingList: [],
     techSpecs: [],
-    reviewVideo: '',
+    reviewVideo,
     detailLink: `https://www.xtooltech.com/products/${item.slug}/`
   };
 });
@@ -209,7 +214,7 @@ export const PRODUCTS: Product[] = [
         'Main Units: Tablet, VCI Box, USB3.0 Data Cable (Connect to PC), Charger for Tablet, Power Cable US, Power Cable EU, Power Cable UK',
         'Test Connectors: DB15 Main Cable, DB15 to USB3.0 Main Cable, Battery Clamp Cable, Cigar Lighter Cable, Jumper, Jumper Adapter, OBD-R16, ECONTROLS-4, WOODWARD-3, ISUZU-3, ISUZU-20, YUCHAI-4, DENSO-12, CUMMINS-16, CUMMINS-9, HITACHI-4, HITACHI-6, CAT-9, VOLVO-8, OBD II-16, HONDA-3, BMW-20, BENZ-14, BENZ-38, TOYOTA-17, MAZDA-17R, KIA-20, HYUNDAI/KIA-10, NISSAN-14, GM/DAEWOO-12, UNIVERSAL-3, SUZUKI-3, FIAT-3, CITROEN-2, AUDI-4, MITSUBISHI-12+16'
     ],
-    reviewVideo: '',
+    reviewVideo: 'no available video',
     detailLink: 'https://www.scantooldepot.com/component/eshop/xtool/n9ev?Itemid=0'
   },
   {
@@ -261,7 +266,7 @@ export const PRODUCTS: Product[] = [
       'USB Data Cable (Connect to PC)',
       'HONDA-3', 'TOYOTA-17', 'BMW-20', 'KIA-20', 'MAZDA-17R', 'NISSAN-14', 'GM/DAEWOO-12', 'SUZUKI-3', 'FIAT-3', 'HYUNDAI/KIA-10', 'AUDI-4', 'MITSUBISHI-12+16', 'UNIVERSAL-3', 'CITROEN-2', 'BENZ-38', 'BENZ-14', 'OBD II-16', 'DB15 Main Cable'
     ],
-    reviewVideo: 'https://www.xtooltech.com/videos/unboxing-showing-features-explained-of-automotive-diagnostic-tool-xt90-xtool.html',
+    reviewVideo: 'no available video',
     detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-xt90/'
   },
   {
@@ -310,7 +315,7 @@ export const PRODUCTS: Product[] = [
       'OBDII-16 Adapter',
       'DB15 Main Cable'
     ],
-    reviewVideo: '',
+    reviewVideo: 'no available video',
     detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-xt80/'
   },
   {
@@ -359,7 +364,7 @@ export const PRODUCTS: Product[] = [
       'OBDII-16 Adapter',
       'DB15 Main Cable'
     ],
-    reviewVideo: 'https://www.xtooltech.com/videos/car-diagnosis-xt80w-unboxing-video-with-functions-introduction.html',
+    reviewVideo: 'no available video',
     detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-xt80w/'
   },
   {
@@ -403,7 +408,7 @@ export const PRODUCTS: Product[] = [
       'Charger UK Adapter',
       'USB Cable'
     ],
-    reviewVideo: 'https://www.xtooltech.com/videos/xt70w-unboxing-overview-xtool-automotive-diagnostic-tool.html',
+    reviewVideo: 'no available video',
     detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-xt70w/'
   },
   {
@@ -455,7 +460,7 @@ export const PRODUCTS: Product[] = [
       'Charger EU Adapter',
       'VGA to OBD II Main Cable'
     ],
-    reviewVideo: '',
+    reviewVideo: 'no available video',
     detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-xt70/'
   },
   {
@@ -510,7 +515,7 @@ export const PRODUCTS: Product[] = [
       'OBD II-16',
       'HONDA-3', 'BMW-20', 'BENZ-14', 'BENZ-38', 'TOYOTA-17', 'MAZDA-17R', 'KIA-20', 'HYUNDAI/KIA-10', 'NISSAN-14', 'GM/DAEWOO-12', 'UNIVERSAL-3', 'SUZUKI-3', 'FIAT-3', 'CITROEN-2', 'AUDI-4', 'MITSUBISHI-12+16'
     ],
-    reviewVideo: 'https://www.xtooltech.com/videos/unboxing-h6pro3-xtool-gasoline-car-diagnosis-tablet-tool.html',
+    reviewVideo: 'no available video',
     detailLink: 'https://www2.xtooltech.com/US/ProductsView/H6P3.html'
   },
   {
@@ -560,7 +565,7 @@ export const PRODUCTS: Product[] = [
       'Cigar Lighter Cable',
       'BENZ-14', 'BENZ-38', 'BMW-20', 'CITROEN-2', 'FIAT-3', 'GM/DAEWOO-12', 'HONDA-3', 'KIA-20', 'KIA/HYUNDAI-10', 'MAZDA-17', 'MITSUBISHI/HYUNDAI-12+16', 'NISSAN-14', 'SUZUKI-3', 'TOYOTA-17', 'UNIVERSAL-3', 'VW/AUDI-2+2'
     ],
-    reviewVideo: 'https://www.xtooltech.com/videos/xtool-prodigy-launch-2025-latest-ultra-large-smart-diagnostic-tool.html',
+    reviewVideo: 'no available video',
     detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-prodigy/'
   },
   {
@@ -608,7 +613,7 @@ export const PRODUCTS: Product[] = [
       'Adapter (Type-C to Type-A)',
       'CITROEN-2', 'VW/AUDI-2+2', 'MITSUBISHI/HYUNDAI-12+16', 'UNIVERSAL-3', 'BENZ-14', 'BENZ-38', 'BMW-20', 'GM/DAEWOO-12', 'HONDA-3', 'TOYOTA-17', 'NISSAN-14', 'KIA-20', 'HYUNDAI/KIA-10', 'MAZDA-17', 'SUZUKI-3', 'FIAT-3'
     ],
-    reviewVideo: 'https://www.xtooltech.com/videos/introduce-compass-compass-master-the-guide-has-awakened.html',
+    reviewVideo: 'https://www.youtube.com/embed/JglIy6FbvrE?si=wOb09v5zPh8fe_aZ',
     detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-compass-compass-master/'
   },
   {
@@ -657,7 +662,7 @@ export const PRODUCTS: Product[] = [
       'Adapter (Type-C to Type-A)',
       'CITROEN-2', 'VW/AUDI-2+2', 'MITSUBISHI/HYUNDAI-12+16', 'UNIVERSAL-3', 'BENZ-14', 'BENZ-38', 'BMW-20', 'GM/DAEWOO-12', 'HONDA-3', 'TOYOTA-17', 'NISSAN-14', 'KIA-20', 'HYUNDAI/KIA-10', 'MAZDA-17', 'SUZUKI-3', 'FIAT-3'
     ],
-    reviewVideo: 'https://www.xtooltech.com/videos/compass-compass-master-unboxing-first-look-whats-inside-the-box.html',
+    reviewVideo: 'https://www.youtube.com/embed/8qJQDJwdvbw?si=ZaOIEzMRCR24BLA9',
     detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-usa-compass-compass-master/'
   },
   {
@@ -716,7 +721,7 @@ export const PRODUCTS: Product[] = [
       'Jumper Adapter',
       'OBD-R16', 'ECONTROLS-4', 'WOODWARD-3', 'ISUZU-3', 'ISUZU-20', 'YUCHAI-4', 'DENSO-12', 'CUMMINS-16', 'CUMMINS-9', 'HITACHI-4', 'HITACHI-6', 'CAT-9', 'VOLVO-8', 'OBD II-16', 'HONDA-3', 'BMW-20', 'BENZ-14', 'BENZ-38', 'TOYOTA-17', 'MAZDA-17R', 'KIA-20', 'HYUNDAI/KIA-10', 'NISSAN-14', 'GM/DAEWOO-12', 'UNIVERSAL-3', 'SUZUKI-3', 'FIAT-3', 'CITROEN-2', 'AUDI-4', 'MITSUBISHI-12+16'
     ],
-    reviewVideo: 'https://www.xtooltech.com/videos/xtool-adas-calibration-system-unboxing-video.html',
+    reviewVideo: 'no available video',
     detailLink: 'https://www.xtooltech.com/products/diesel-diagnostic-tool-d9hd/'
   },
   {
@@ -772,7 +777,7 @@ export const PRODUCTS: Product[] = [
       'XTA004 Cable',
       'Charging Dock'
     ],
-    reviewVideo: 'https://www.xtooltech.com/videos/that%27s-two-scan-tools-for-the-price-of-one-xtool-n9ev-scan-tool-unbox-review.html',
+    reviewVideo: 'https://www.youtube.com/embed/KWjKmcM-o58?si=krxlPB7jQh_oE5PL',
     detailLink: 'https://www.xtooltech.com/products/n9ev-2/'
   },
   {
@@ -830,7 +835,7 @@ export const PRODUCTS: Product[] = [
       'Dimensions: 311 × 190 × 41 mm'
     ],
     packingList: [],
-    reviewVideo: 'https://www.xtooltech.com/videos/power-up-your-ev-diagnostics-with-xtool-e2pro.html',
+    reviewVideo: 'no available video',
     detailLink: 'https://www.xtooltech.com/products/ev-diagnostic-tools-e2-pro/'
   },
   {
@@ -857,7 +862,7 @@ export const PRODUCTS: Product[] = [
       'Operating Temperature: 0~40℃'
     ],
     packingList: [],
-    reviewVideo: 'https://www.xtooltech.com/videos/introducing-xt50-the-portable-smart-diagnostic-tool-from-xtool.html',
+    reviewVideo: 'no available video',
     detailLink: 'https://www.xtooltech.com/products/gasoline-diagnostic-tools-xt50/'
   },
   {
@@ -884,7 +889,7 @@ export const PRODUCTS: Product[] = [
       'Working Temp: 0°C to 40°C'
     ],
     packingList: [],
-    reviewVideo: '',
+    reviewVideo: 'no available video',
     detailLink: 'https://www.xtooltech.com/products/auto-diagnostic-tools-J2534-pass-thru-device-xportal/'
   },
   {
@@ -914,7 +919,7 @@ export const PRODUCTS: Product[] = [
       'Power Consumption: <100W'
     ],
     packingList: [],
-    reviewVideo: '',
+    reviewVideo: 'no available video',
     detailLink: 'https://www.xtooltech.com/products/bec2440-battery-balancer/'
   },
   {
@@ -1017,7 +1022,7 @@ export const PRODUCTS: Product[] = [
       'Warranty：2 YEARS',
       'Compatible Protocol：CAN FD'
     ],
-    reviewVideo: 'https://www.xtooltech.com/videos/master-xtool-a30-anyscan-app-a-complete-how-to-guide.html',
+    reviewVideo: 'no available video',
     detailLink: 'https://www.xtooltech.com/products/obd2-code-reader-a30m/'
   },
   {
@@ -1047,7 +1052,7 @@ export const PRODUCTS: Product[] = [
       'X₂TPU Transponder Precoding Unit',
       'X₂MBIR IR Key Precoding Unit'
     ],
-    reviewVideo: '',
+    reviewVideo: 'no available video',
     detailLink: 'https://www.xtooltech.com/products/key-programmers-x2prog-series/',
     badgeLabel: 'On Request'
   },
@@ -1081,7 +1086,7 @@ export const PRODUCTS: Product[] = [
       'Cables and connectors',
       'Tool case'
     ],
-    reviewVideo: '',
+    reviewVideo: 'https://www.youtube.com/embed/DqgHVx6uOps?si=yr_F2CflFFcFv64O',
     detailLink: 'https://www.xtooltech.com/products/key-programmers-x100pad-elite2/',
     badgeLabel: 'On Request'
   },
@@ -1100,7 +1105,7 @@ export const PRODUCTS: Product[] = [
       'Supports key matching across a wide range of vehicles',
       'Adds practical service functions such as maintenance reset and battery matching'
     ],
-    reviewVideo: '',
+    reviewVideo: 'no available video',
     detailLink: 'https://www.xtooltech.com/products/x100pads-ev-key-programmer/',
     badgeLabel: 'On Request'
   },
@@ -1126,7 +1131,7 @@ export const PRODUCTS: Product[] = [
       'Connectivity: USB Type-C, VGA',
       'Battery: 2500mAh'
     ],
-    reviewVideo: '',
+    reviewVideo: 'no available video',
     detailLink: 'https://www2.xtooltech.com/english/ProductsView/IK618E.html',
     badgeLabel: 'On Request'
   },
@@ -1151,7 +1156,7 @@ export const PRODUCTS: Product[] = [
       'Storage temperature: -20C to 60C',
       'Weight: 0.32 kg'
     ],
-    reviewVideo: '',
+    reviewVideo: 'no available video',
     detailLink: 'https://www.xtooltech.com/products/key-programmers-kc501/',
     badgeLabel: 'On Request'
   },
@@ -1173,7 +1178,7 @@ export const PRODUCTS: Product[] = [
       'Port: USB 3.0',
       'Frequency: 315/433MHz RF and 125KHz LF'
     ],
-    reviewVideo: '',
+    reviewVideo: 'https://www.youtube.com/embed/Nkb3I5_bBAI?si=xp0qKv_k4cK9U_EW',
     detailLink: 'https://www.xtooltech.com/products/key-programmers-anytoyo-sk1/',
     badgeLabel: 'On Request'
   },
@@ -1199,7 +1204,7 @@ export const PRODUCTS: Product[] = [
       'Battery: 5000mAh lithium-polymer',
       'Operating time: up to 6 hours'
     ],
-    reviewVideo: '',
+    reviewVideo: 'no available video',
     detailLink: 'https://en.xtooltech.com/products/tpms-tools-inplus-ip819tp/',
     badgeLabel: 'On Request'
   },
@@ -1222,7 +1227,7 @@ export const PRODUCTS: Product[] = [
       'Storage: 32GB flash',
       'VCI communication: WiFi'
     ],
-    reviewVideo: '',
+    reviewVideo: 'no available video',
     detailLink: 'https://en.xtooltech.com/products/tpms-tools-xtireprobe/',
     badgeLabel: 'On Request'
   },
@@ -1248,7 +1253,7 @@ export const PRODUCTS: Product[] = [
       'Waterproof rating: IP67',
       'Pressure range: 0-900kPa'
     ],
-    reviewVideo: '',
+    reviewVideo: 'no available video',
     detailLink: 'https://www.xtooltech.com/products/tpms-tools-ts100-bt/',
     badgeLabel: 'On Request'
   },
@@ -1280,7 +1285,7 @@ export const PRODUCTS: Product[] = [
       'Centering clamp',
       'Calibration pattern ASCB1000-1'
     ],
-    reviewVideo: '',
+    reviewVideo: 'https://www.youtube.com/embed/i4xNvtTwNu0?si=frS2NkIQqcTg0dmh',
     detailLink: 'https://en.xtooltech.com/products/adas-calibration-system-asct-1000/',
     badgeLabel: 'On Request'
   },
