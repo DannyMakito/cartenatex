@@ -177,7 +177,7 @@ export const PRODUCTS: Product[] = [
     name: 'D9HD',
     category: 'Diesel Diagnostic',
     price: 40063,
-    image: 'https://en.xtooltech.com/uploads/images/diesel-diagnostic-tool-d9hd-bulk.webp',
+    image: 'https://www.xtooltech.com/uploads/images/diesel-diagnostic-tool-d9hd-factory_1763446596.webp',
     description: 'D9HD is the ultimate dual-use diagnostic tablet for both 12V cars and 24V heavy-duty trucks, ideal for workshops, service centers, and mobile technicians. Running Android 10, it boasts a 9.7″ HD touchscreen, a quad-core 1.8 GHz CPU, 2GB RAM, and 128GB storage, paired with a 10,000 mAh battery and 8MP rear camera. It delivers full-system diagnostics, online/offline ECU coding, topology mapping, bi-directional controls, key programming, and over 40+ special service functions. Enjoy 3 years of free software updates and extensive coverage spanning 10,000+ models—professional-grade, yet truly portable.',
    
     features: [
@@ -219,11 +219,11 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'xtool-2',
-    name: 'XT90',
+    name: 'XT90 (2026)',
     category: 'Gasoline Diagnostic',
     price: 24198,
-    image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/xt90-350x350.jpg',
-    description: 'XT90 is an advanced automotive diagnostic system featuring a large 9.7-inch screen and dual WIFI modules for stable data transfer between the tablet and VCI. It provides full-system automotive diagnostics, live data, Bi-directional control tests, ECU coding and programming.',
+    image: 'https://www.xtooltech.com/uploads/images/gasoline-diagnostic-tools-xt90-bulk.webp',
+    description: 'XT90 is a smart automotive diagnostic system, equipped with a 9.7-inch HD touchscreen, quad-core 10 processor, and 128GB large storage, supporting dual Wi-Fi for stable connections. It offers OE-level all-system diagnostics, live data monitoring, bi-directional control, ECU programming, and over 40 special functions such as oil reset, ABS bleeding, DPF regeneration, and TPMS reset. With coverage of up to 98%, compatible with over 100 brands and 10,000+ models, XT90 is a reliable and efficient tool for professional technicians and workshops.',
     features: [
       'Full-System Diagnostic: Perform OE-Level diagnosis on all available systems. Support ECU information, read and clear DTC, live data and freeze frame and special function under system menus',
       'Online & Offline Programming: Support Online Programming for Volkswagen, Audi, BMW, Mercedes-Benz and programmable module installation for Ford and Mazda',
@@ -271,11 +271,11 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 'xtool-3',
-    name: 'XT80',
+    name: 'XT80 (2026)',
     category: 'Gasoline Diagnostic',
     price: 11690,
-    image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/xt80-350x350.jpg',
-    description: 'XT80 is an automotive smart diagnostic system with 8 inches LCD display, which is designed for mechanics, electricians, and car maintenance shops. It supports full OBDII function and automotive diagnostics for full-system.',
+    image: 'https://www.xtooltech.com/uploads/images/gasoline-diagnostic-tools-xt80-bulk.webp',
+    description: 'XT80 is smart diagnostic system designed for mechanics, electricians, and auto repair shops. It leverages DoIP (for Benz, Jaguar, Land Rover, BMW) and CAN FD (for GM) protocols to deliver OE-level diagnostics for all systems on vehicles. Key features include topology auto-scanning, DTC read/erase, live data, freeze frame, bi-directional controls, AutoScan ID, and optional ADAS calibration. With 98% vehicle coverage, it supports 85+ brands and over 10,000 models.',
     features: [
       'Bi-Directional Control: Receive information and send the commands to the system/components to perform active tests like EVAP Test, Fuel Pump Test, Fuel Injector Test, Cycling A/C Clutch On/Off, Cooling Fan Test, etc.',
       'Full-System Diagnostic: Perform OE-Level diagnosis on all available systems. Support ECU information, read and clear DTC, live data and freeze frame and special function under system menus',
@@ -323,8 +323,8 @@ export const PRODUCTS: Product[] = [
     name: 'XT80W',
     category: 'Gasoline Diagnostic',
     price: 12525,
-    image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/xt80w-350x350.jpg',
-    description: 'XT80W is an automotive smart diagnostic system with 8 inches LCD display, featuring wireless VCI Connectivity in a Compact Scan Tool.',
+    image: 'https://www.xtooltech.com/uploads/images/xt80w.webp',
+    description: 'XT80W is a diagnostic system tailored for mechanics, electricians, and auto repair shops. It delivers full-system diagnostics for vehicles since 1996 across U.S., Asian, European, and Chinese brands. Core functions include topology auto-scan, read/erase codes, live data, freeze frame, bi-directional control, and AutoScan vehicle ID, plus 35+ special functions. With 98% vehicle coverage, it supports over 100 brands and 10,000+ models.',
     features: [
       'Bi-Directional Control: Receive information and send the commands to the system/components to perform active tests like EVAP Test, Fuel Pump Test, Fuel Injector Test, Cycling A/C Clutch On/Off, Cooling Fan Test, etc.',
       'Full-System Diagnostic: Perform OE-Level diagnosis on all available systems. Support ECU information, read and clear DTC, live data and freeze frame and special function under system menus',
@@ -372,8 +372,8 @@ export const PRODUCTS: Product[] = [
     name: 'XT70W',
     category: 'Gasoline Diagnostic',
     price: 9502,
-    image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/xt70w-350x350.jpg',
-    description: 'XT70W is an automotive smart diagnostic system with a 7-inch LCD display and Android 10 OS, designed for mechanics, electricians, and car maintenance shops.',
+    image: 'https://www.xtooltech.com/uploads/images/xt70w_1770715380.webp',
+    description: 'XT70W is a intelligent diagnostic system redefines the standard for professional automotive repair. The system supports comprehensive vehicle system diagnostics, capable of reading ECU version information, DTCs, live data streams, and freeze frames, while also integrating over 35+ specialized functions - from airbag reset to steering angle learning, from injector coding to DPF regeneration - addressing the core needs of contemporary automotive repair.',
     features: [
       'Full OBD2 functions: Including DTC HELP, Read/Clear codes, Live data, Freeze rame, I/M Readiness, Read ECU information, On-Board Monitor Test, and Component Test',
       'Bi-Directional Control: Receive information and send the commands to the system/components to perform active tests like EVAP Test, Fuel Pump Test, Fuel Injector Test, Cycling A/C Clutch On/Off, Cooling Fan Test, etc.',
@@ -416,7 +416,7 @@ export const PRODUCTS: Product[] = [
     name: 'XT70',
     category: 'Gasoline Diagnostic',
     price: 7348,
-    image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/xt70-350x350.jpg',
+    image: 'https://www.xtooltech.com/uploads/images/diagnostic-tablet-xt70.webp',
     description: 'XT70 is an automotive smart diagnostic system with a 7-inch LCD display and Android 10 OS. It supports diagnostics for full-system.',
     features: [
       'Full-System Diagnosis: Read/clear codes for all available systems',
@@ -468,7 +468,7 @@ export const PRODUCTS: Product[] = [
     name: 'H6 PRO 3',
     category: 'Gasoline Diagnostic',
     price: 30895,
-    image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/H6PRO3-350x350.png',
+    image: 'https://www.xtooltech.com/uploads/images/diagnostic-tools-d5-00.webp',
     description: 'Coverage includes U.S., European, Asian and Chinese electric, gas and diesel, and hybrid vehicles. Provides fault code guidance for VAG and BMW.',
     features: [
       'Top-Tier Performance: 10.1\' Touchscreen (1920 x 1200) powered by Android 10.0 and an Octa-core Processor (2.2GHz+1.8GHz)',
@@ -523,8 +523,8 @@ export const PRODUCTS: Product[] = [
     name: 'Prodigy',
     category: 'Gasoline Diagnostic',
     price: 69305,
-    image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/Prodigy%20main-350x350.png',
-    description: 'Prodigy is a high-performance automotive diagnostic tool featuring a 13.3-inch touchscreen, Android 10.0, and advanced communication protocols (DoIP/CAN FD). Designed for electric, gasoline, and hybrid vehicles across global markets, it offers fast diagnostics, 50+ reset and relearn functions, ADAS calibration, and seamless ECU programming. With topology mapping and enhanced diagnostic reports, Prodigy ensures precise and efficient troubleshooting for professionals.',
+    image: 'https://www.xtooltech.com/uploads/images/diagnostic-scan-tool-prodigy.webp',
+    description: 'The XTOOL Prodigy is the flagship diagnostic scan tool built for new aged service facilities and the modern technicians that demand performance and accuracy from a tool. Featuring a 13.3" display, powerful octa-core processor, and wide vehicle coverage, it supports advanced functions like ECU coding, offline programming, ADAS calibration, and full-system diagnostics. The Prodigy interfaces and conforms to all new aged vehicle network protocols such as DoIP, CAN FD, J2534 and more. Additional features includes Topology Snapshot of Control Modules, dynamically accurate live data, and among the most user friendly navigation interfaces in the scan tool industry. The Prodigy delivers precision, speed, and versatility—ideal for modern automotive diagnostics.',
     features: [
       'Industry Partnership: XTOOL\'s first device offering access to an online informatics database in partnership with Autodata',
       'Supreme Display: 13.3" HD Display (1920 × 1080) with high-performance Android 10.0 system',
@@ -670,7 +670,7 @@ export const PRODUCTS: Product[] = [
     name: 'D9HD',
     category: 'Diesel Diagnostic',
     price: 31713,
-    image: 'https://www.scantooldepot.com/media/com_eshop/products/resized/D9HD%201-350x350.png',
+    image: 'https://www.xtooltech.com/uploads/images/diesel-diagnostic-tool-d9hd-bulk.webp',
     description: 'D9HD is an automotive smart diagnostic system designed for passenger cars, commercial vehicles, and heavy-duty trucks.It supports full-system diagnostics for passenger cars, commercial vehicles, and heavy-duty trucks, including reading ECU version information, reading fault codes, live data, freeze frames and bi-directional control test. 42 common special functions, such as throttle matching, ABS bleed, maintenance light reset, EPB test, SAS, BMS, injector coding, DPF regeneration, and TPMS reset are supported. Under the system menu, you can also explore a wealth of special functions. 98% vehicle coverage, work on more than 85 brands, 10000 cars.',
     features: [
       'Full System Diagnostics for Passenger Cars, Commercial Vehicles, and Heavy-Duty Trucks',
@@ -729,7 +729,7 @@ export const PRODUCTS: Product[] = [
     name: 'N9EV 2',
     category: 'EV Diagnostic',
     price: 0,
-    image: 'https://www.xtooltech.com/uploads/images/n9ev-2-bulk.webp',
+    image: 'https://www.xtooltech.com/uploads/images/N9EV-2-2.webp',
     description: 'N9EV 2 is XTOOL’s advanced EV diagnostic tool built for BEV, PHEV, and EREV platforms. It supports full-system diagnosis, battery pack detection, BMS data recovery, off-vehicle component testing, topology mapping, and continuous online upgrades for modern new energy vehicle repair.',
     features: [
       'Full NEV coverage for BEV, PHEV, and EREV models',
@@ -1300,12 +1300,12 @@ export const SERVICES: ServiceItem[] = [
   },
   {
     title: 'Electrical Services',
-    image: 'https://eroadworthygeelong.com.au/wp-content/uploads/2024/06/Auto-Electrical-Services-01.jpg',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROq0zcE9sldMEvXbmv0772jnRuaVZTe5KZWWER5lFHug&s=10',
     items: ['AC Repair', 'Comfort System Repair','Fault-finding','charging systems']
   },
   {
     title: 'Diagnostics toool',
-    image: 'https://th.bing.com/th/id/OIP.yJFYmsrWH2RUZ74Q4_-Q2gHaEo?w=315&h=196&c=7&r=0&o=7&pid=1.7&rm=3',
+    image: 'https://i.postimg.cc/ZqmV174d/IMG-20260810-WA0025.jpg',
     items: ['smart scanner ', 'heavey duty/ hand held']
   },
   {
